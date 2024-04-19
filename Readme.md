@@ -1,4 +1,4 @@
-# Personal Portfolio 🔥
+# Personal Portfolio 
 > https://ap27vikings.github.io/
 
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/ap27vikings/ap27vikings.github.io/commits/master)
