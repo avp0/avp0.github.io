@@ -1,12 +1,3 @@
-To modify the gradient colors in your CSS, you will need to locate the specific gradient definitions and update the color values as requested. Here's how you can make these changes:
-
-1. **Change the purple gradient color to `#d2efff`.**
-2. **Change the lighter pink gradient color to `#b3f1c8`.**
-3. **Change the button colors to `#ff0054`.**
-
-Here is your updated CSS with these changes:
-
-```css
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
