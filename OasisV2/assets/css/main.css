@@ -2370,7 +2370,7 @@ input, select, textarea {
 	}
 
 		.image img {
-			border-radius: 8px;
+			border-radius: 0px;
 			display: block;
 		}
 
