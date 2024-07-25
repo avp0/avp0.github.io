@@ -120,7 +120,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #d2efff;
+		background-color: #ffffff;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
@@ -311,11 +311,11 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: #ff0054;
+		color: #ffffff;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ff0054;
+		color: #ffffff;
 	}
 
 	blockquote {
@@ -3458,8 +3458,8 @@ input, select, textarea {
 			#main input[type="email"]:focus,
 			#main select:focus,
 			#main textarea:focus {
-				border-color: #ff0054;
-				box-shadow: 0 0 0 1px #ff0054;
+				border-color: #ffffff;
+				box-shadow: 0 0 0 1px #ffffff;
 			}
 
 		#main select {
@@ -3468,7 +3468,7 @@ input, select, textarea {
 
 			#main select option {
 				color: #636363;
-				background: #ff0054;
+				background: #ffffff;
 			}
 
 		#main input[type="checkbox"] + label,
@@ -3486,13 +3486,13 @@ input, select, textarea {
 		#main input[type="radio"]:checked + label:before {
 			background-color: #636363;
 			border-color: #636363;
-			color: #ff0054;
+			color: #ffffff;
 		}
 
 		#main input[type="checkbox"]:focus + label:before,
 		#main input[type="radio"]:focus + label:before {
-			border-color: #ff0054;
-			box-shadow: 0 0 0 1px #ff0054;
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
 		}
 
 		#main ::-webkit-input-placeholder {
@@ -3546,10 +3546,10 @@ input, select, textarea {
 
 		#main header.major h2:after {
 			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #b3f1c8, #a89cc8, #ff0054);
-			background-image: -webkit-linear-gradient(90deg, #b3f1c8, #a89cc8, #ff0054);
-			background-image: -ms-linear-gradient(90deg, #b3f1c8, #a89cc8, #ff0054);
-			background-image: linear-gradient(90deg, #b3f1c8, #a89cc8, #ff0054);
+			background-image: -moz-linear-gradient(90deg, #b3f1c8, #a89cc8, #ffffff);
+			background-image: -webkit-linear-gradient(90deg, #b3f1c8, #a89cc8, #ffffff);
+			background-image: -ms-linear-gradient(90deg, #b3f1c8, #a89cc8, #ffffff);
+			background-image: linear-gradient(90deg, #b3f1c8, #a89cc8, #ffffff);
 		}
 
 		#main table tbody tr {
