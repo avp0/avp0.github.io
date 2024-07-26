@@ -3399,7 +3399,7 @@ input, select, textarea {
 			#main input[type="button"]:active,
 			#main button:active,
 			#main .button:active {
-				background-color: rgba(222, 222, 222, 0.5);
+				background-color: rgba(57, 255, 20, 1);
 			}
 
 			#main input[type="submit"].icon:before,
@@ -3407,7 +3407,7 @@ input, select, textarea {
 			#main input[type="button"].icon:before,
 			#main button.icon:before,
 			#main .button.icon:before {
-				color: rgba(99, 99, 99, 0.25);
+				color: rgba(57, 255, 20, 1);
 			}
 
 			#main input[type="submit"].primary,
