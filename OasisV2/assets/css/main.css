@@ -303,7 +303,7 @@ input, select, textarea {
 	}
 
 	input, select, textarea {
-		color: #ffffff;
+		color: #000000;
 	}
 
 	a:hover {
@@ -311,7 +311,7 @@ input, select, textarea {
 	}
 
 	strong, b {
-		color: #ffffff;
+		color: #000000;
 	}
 
 	h1 {
@@ -2144,7 +2144,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #ffffff;
+		color: #000000;
 	}
 
 	input[type="text"],
