@@ -1100,10 +1100,8 @@ section .container {
   position: fixed;
   top: 10px;
   right: 15px;
-  background: rgba(0,0,0,0.7);
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
   font-size: 12px;
+  font-family: inherit;
   z-index: 9999;
 }
