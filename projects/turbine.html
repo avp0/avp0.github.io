@@ -1,163 +1,129 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Miniature Wind Turbine</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <title>Mini Wind Turbine</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Favicons -->
-    <link href="../assets/img/favicon.png" rel="icon">
-    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="../assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: Personal - v2.2.0
-    * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
-
-    <style>
-        h2 { color:#12d640; margin-bottom:20px; }
-        h3 { margin-top:20px; color:#0a9396; }
-        .highlight { background:#e6f7f5; padding:10px; border-radius:8px; }
-        .result { font-weight:bold; color:#005f73; }
-        ul { margin-bottom:15px; }
-    </style>
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
-<body data-gr-c-s-loaded="true">
-
-<!-- ======= Portfolio Details ======= -->
-<main id="main">
+<body>
+  <!-- ======= Portfolio Details ======= -->
+  <main id="main">
     <div id="portfolio-details" class="portfolio-details">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 portfolio-info">
-                    <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">Miniature Wind Turbine</h2>
+            <ul>
+              <li><strong>Relevant Skills</strong>: CAD & FEA (SolidWorks), Aerodynamics, Rapid Prototyping, Testing, Team Collaboration</li>
+            </ul>
 
-                    <!-- Title -->
-                    <h2><i class="bx bx-wind"></i> Miniature Wind Turbine</h2>
+            <p>
+              <h4>Situation</h4>
+              In Fall 2023, a team of seven UC Berkeley Mechanical Engineering students designed, built, and tested a miniature wind turbine as part of ENGIN 26: Three-Dimensional Modeling for Design (Professor Kourosh Youssefi). The goal was to explore wind energy principles and deliver a turbine capable of maximizing power generation under strict constraints.
+            </p>
 
-                    <!-- Summary -->
-                    <div class="highlight">
-                        <p><strong>Summary:</strong> A semester-long project to design, 3D print, and test a small-scale wind turbine.
-                        Focused on aerodynamics, structural design, and renewable energy performance. 
-                        Conducted under <em>ENGIN 26: Three-Dimensional Modeling for Design</em> at UC Berkeley.</p>
-                    </div>
+            <p>
+              <h4>Task</h4>
+              The turbine had to meet the following requirements:
+              <ul>
+                <li>Generate &gt;2 W at 25 mph wind</li>
+                <li>Minimum stiffness &gt;8 N/mm</li>
+                <li>Total mass &lt;350 g</li>
+                <li>Tower height 16 inches, blade length ≤3 inches</li>
+                <li>3D printed using ABS, modular construction</li>
+              </ul>
+            </p>
 
-                    <!-- Requirements -->
-                    <h3><i class="bx bx-list-check"></i> Requirements</h3>
-                    <ul>
-                        <li>Power output &gt; 2 W at 25 mph wind</li>
-                        <li>Stiffness &gt; 8 N/mm</li>
-                        <li>Total weight &lt; 350 g</li>
-                        <li>16-inch tower height, max blade length 3 inches</li>
-                        <li>Modular design for 3D printing (ABS plastic)</li>
-                    </ul>
+            <p>
+              <h4>Action</h4>
+              <ul>
+                <li><strong>Blade Design:</strong>
+                  <ul>
+                    <li>Final rotor design used 3 blades, each 2.5” in length.</li>
+                    <li>Twist angle: 21°, angle of attack: 15° (optimized compromise).</li>
+                    <li>Symmetric airfoil selected to balance performance at low Reynolds numbers.</li>
+                    <li>Blades modeled in SolidWorks using loft and circular pattern features, then 3D printed.</li>
+                  </ul>
+                </li>
 
-                    <!-- Results -->
-                    <h3><i class="bx bx-bar-chart"></i> Results</h3>
-                    <ul>
-                        <li><span class="result">Peak Power:</span> 0.3908 W</li>
-                        <li><span class="result">Stiffness:</span> &gt;8 N/mm (0.94 mm deflection under 1 kg load)</li>
-                        <li><span class="result">Mass:</span> 253.3 g</li>
-                        <li><span class="result">Efficiency:</span> 3.19%</li>
-                    </ul>
+                <li><strong>Tower Design:</strong>
+                  <ul>
+                    <li>Eiffel Tower-inspired, three-legged, radially symmetric design for stability.</li>
+                    <li>Modular structure (top and bottom split into three parts) with male-female couplings for alignment.</li>
+                    <li>Equilateral triangle cross-section, wide base tapering to minimize flow interference.</li>
+                    <li>Filleted edges to reduce stress concentrations and improve aerodynamics.</li>
+                  </ul>
+                </li>
 
-                    <!-- Blade Design -->
-                    <h3><i class="bx bx-shape-polygon"></i> Blade Design</h3>
-                    <ul>
-                        <li>3 blades, each 2.5” in length</li>
-                        <li>Twist angle: 21°, Angle of attack: 15°</li>
-                        <li>Symmetric airfoil profile for stability</li>
-                        <li>Created in SolidWorks using loft & pattern tools</li>
-                    </ul>
+                <li><strong>Simulation and Testing:</strong>
+                  <ul>
+                    <li><strong>FEA (SolidWorks):</strong> Maximum displacement of 0.2145 mm under 9.81 N load. Factor of safety &gt;3 across tower.</li>
+                    <li><strong>Power Output:</strong> Peak power = 0.3908 W at ~4050 rpm (25 mph wind).</li>
+                    <li><strong>Deflection Test:</strong> Withstood 1 kg load with only 0.94 mm displacement, confirming &gt;8 N/mm stiffness.</li>
+                    <li><strong>Efficiency:</strong> Experimental efficiency calculated as ~3.19% (0.3908 W / 12.236 W theoretical).</li>
+                  </ul>
+                </li>
 
-                    <!-- Tower Design -->
-                    <h3><i class="bx bx-building"></i> Tower Design</h3>
-                    <ul>
-                        <li>Eiffel-inspired 3-legged structure for stability</li>
-                        <li>Equilateral triangular cross-section, tapered top</li>
-                        <li>Modular split for 3D printing, male-female couplings</li>
-                        <li>FEA showed max displacement 0.2145 mm, FOS &gt; 3</li>
-                    </ul>
+                <li><strong>Collaboration and Documentation:</strong>
+                  <ul>
+                    <li>Team maintained detailed CAD drawings, test data, and FEA reports.</li>
+                    <li>Findings presented in final project report with recommendations for future improvements.</li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
 
-                    <!-- Skills -->
-                    <h3><i class="bx bx-brain"></i> Skills</h3>
-                    <p>CAD & FEA (SolidWorks), Aerodynamics, Rapid Prototyping, Physical Testing, Technical Documentation, Team Collaboration</p>
+            <p>
+              <h4>Result</h4>
+              The turbine successfully met weight and stiffness constraints:
+              <ul>
+                <li>Mass: 253.3 g</li>
+                <li>Stiffness: 8–16 N/mm achieved</li>
+                <li>Peak Power: 0.3908 W</li>
+                <li>Efficiency: ~3.19%</li>
+              </ul>
+              While efficiency was lower than theoretical, the project validated key aerodynamic and structural design principles for small-scale wind turbines.
+            </p>
 
-                    <!-- Image placeholders -->
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="../assets/img/project/windturbine/cad_model.png" class="img-fluid" alt="Wind Turbine CAD Model">
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="../assets/img/project/windturbine/prototype.jpeg" class="img-fluid" alt="3D Printed Prototype">
-                        </div>
-                        <div class="col-lg-4">
-                            <video class="img-fluid" controls aria-label="Wind Turbine Testing">
-                                <source src="../assets/img/project/windturbine/testing.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="../assets/img/project/windturbine/blade_design.png" class="img-fluid" alt="Blade Design">
-                        </div>
-                        <div class="col-lg-4">
-                            <img src="../assets/img/project/windturbine/tower_analysis.png" class="img-fluid" alt="Tower FEA Analysis">
-                        </div>
-                    </div>
+            <p>
+              <h4>Conclusion</h4>
+              This project provided hands-on experience in renewable energy design, CAD modeling, FEA simulation, and rapid prototyping. The Eiffel-inspired tower structure and optimized blade geometry demonstrated practical trade-offs in wind turbine design. Recommendations for future work included improved motor housing placement, alternative airfoil selection, and manufacturing refinements for higher efficiency.
+            </p>
 
-                    <!-- Reflection and Improvements -->
-                    <h3><i class="bx bx-refresh"></i> Reflection & Improvements</h3>
-                    <p>
-                        The Miniature Wind Turbine project successfully demonstrated the design, fabrication, and testing of a small-scale renewable energy system. 
-                        The prototype met key structural requirements such as stiffness and weight while showcasing functional aerodynamic performance. 
-                        However, efficiency and power output remained below the target threshold, highlighting areas for improvement.
-                    </p>
-                    <ul>
-                        <li><strong>Blade Aerodynamics:</strong> Refining the blade profile and testing alternative airfoil geometries could significantly increase power output.</li>
-                        <li><strong>Material Selection:</strong> While ABS plastic was suitable for prototyping, switching to composites or lightweight metals could improve durability and stiffness.</li>
-                        <li><strong>Generator Integration:</strong> Optimizing the coupling between the blades and generator would reduce mechanical losses and improve efficiency.</li>
-                        <li><strong>Tower Stability:</strong> The Eiffel-inspired structure performed well, but incorporating damping elements could further reduce vibration during high wind speeds.</li>
-                        <li><strong>Testing Conditions:</strong> Expanding tests beyond laboratory setups (e.g., outdoor wind conditions) would provide more realistic performance data.</li>
-                    </ul>
-                    <p>
-                        Overall, the project provided valuable experience in CAD modeling, finite element analysis, and hands-on prototyping. 
-                        Future iterations could focus on improving aerodynamic performance and energy conversion efficiency while maintaining structural reliability.
-                    </p>
-
-                </div>
+            <!-- Placeholder for future images -->
+            <div style="margin-top: 20px;">
+              <p><strong>Image Gallery:</strong></p>
+              <p>[Image 1: CAD Model]</p>
+              <p>[Image 2: FEA Simulation]</p>
+              <p>[Image 3: Fabricated Prototype]</p>
+              <p>[Image 4: Experimental Setup]</p>
+              <p>[Image 5: Test Results]</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</main>
-
-<!-- Vendor JS Files -->
-<script src="../assets/vendor/jquery/jquery.min.js"></script>
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="../assets/vendor/php-email-form/validate.js"></script>
-<script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="../assets/vendor/venobox/venobox.min.js"></script>
-<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="../assets/vendor/aos/aos.js"></script>
-
-<!-- Template Main JS File -->
-<script src="../assets/js/main.js"></script>
-
+  </main>
 </body>
 </html>
