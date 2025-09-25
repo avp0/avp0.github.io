@@ -1147,16 +1147,15 @@ section .container {
   line-height: 1.4;
 }
 
-/* Coursework links */
 .coursework-list a {
-  color: #c11c84;
+  color: #00bfff;  /* Electric blue */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .coursework-list a:hover {
   text-decoration: underline;
-  color: #d63aa8;
+  color: #4dd2ff;  /* Lighter electric blue for hover */
 }
 
 /* External links (like European Innovation Academy) */
