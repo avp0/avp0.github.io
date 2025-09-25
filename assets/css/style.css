@@ -1116,3 +1116,135 @@ section .container {
   color: #fff;   
   margin-left: 5px;
 }
+/* ================================
+   COURSEWORK SECTION STYLES
+   ================================ */
+
+/* Main coursework section container */
+.coursework-section {
+  margin-bottom: 2rem;
+}
+
+/* Coursework section titles */
+.coursework-section h5 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Coursework lists */
+.coursework-list {
+  font-size: 0.9rem;
+  color: #fff;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+  list-style-type: disc;
+}
+
+.coursework-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Coursework links */
+.coursework-list a {
+  color: #c11c84;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.coursework-list a:hover {
+  text-decoration: underline;
+  color: #d63aa8;
+}
+
+/* External links (like European Innovation Academy) */
+.coursework-list a.external-link {
+  color: #bbb;
+  font-style: italic;
+}
+
+.coursework-list a.external-link:hover {
+  color: #ddd;
+}
+
+/* Note text under coursework */
+.coursework-note {
+  font-size: 0.85rem;
+  color: #bbbbbb;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Education section specific overrides */
+#education .coursework-section h5 {
+  text-align: left;
+  padding: 0;
+}
+
+/* Responsive design for coursework */
+@media (max-width: 768px) {
+  .coursework-list {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+  
+  .coursework-section h5 {
+    font-size: 1rem;
+  }
+  
+  .coursework-note {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .coursework-list {
+    font-size: 0.8rem;
+  }
+  
+  .coursework-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Bootstrap utility classes you might need */
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+/* If you need custom Bootstrap-style columns */
+@media (min-width: 992px) {
+  .coursework-col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.coursework-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (max-width: 991px) {
+  .coursework-col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
