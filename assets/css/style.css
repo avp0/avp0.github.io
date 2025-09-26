@@ -1315,3 +1315,37 @@ section .container {
   width: auto;
   height: auto;
 }
+/* Image Gallery Grid */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* auto-fit to screen */
+  gap: 20px;                  /* space between images */
+  margin-top: 20px;
+}
+
+/* Each figure (image + caption) */
+.image-gallery figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* Images */
+.image-gallery img,
+.image-gallery video {
+  width: 100%;
+  max-width: 220px;           /* consistent size across all images */
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;          /* ensures images fill space nicely */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Captions */
+.image-gallery figcaption {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #ddd;
+  text-align: center;
+}
