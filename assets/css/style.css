@@ -1290,3 +1290,28 @@ section .container {
   max-width: 100%;
   height: auto;
 }
+/* Title styling (already used before) */
+.project-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Each project card column */
+.portfolio-item {
+  height: 320px;                  /* adjust this as needed to fit tallest image + title */
+  display: flex;
+  flex-direction: column;         /* stack title above image */
+  justify-content: center;        /* vertical center within the card */
+}
+
+/* Images inside project cards */
+.portfolio-wrap img {
+  display: block;
+  margin-left: auto;              /* center horizontally */
+  margin-right: auto;             /* center horizontally */
+  max-height: 200px;              /* adjust so all images fit neatly */
+  width: auto;
+  height: auto;
+}
