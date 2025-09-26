@@ -1276,19 +1276,17 @@ section .container {
   justify-content: center;       /* Optional */
   align-items: center;           /* Optional */
 }
-/* Centers all project titles */
 .project-title {
-  text-align: center;          /* replaces <center> */
-  font-size: 1.25rem;          /* keep heading size consistent */
+  text-align: center;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
-/* Centers all project images */
 .portfolio-wrap img {
-  display: block;              /* allow margin auto to work */
-  margin-left: auto;           /* center horizontally */
-  margin-right: auto;          /* center horizontally */
-  max-width: 100%;             /* keep responsive */
-  height: auto;                /* keep aspect ratio */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
