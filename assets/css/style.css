@@ -1269,3 +1269,10 @@ section .container {
   padding-left: 30px;
   margin-top: 5px;
 }
+.portfolio-wrap {
+  background-color: #ffffff;      /* White background */
+  position: relative;            /* Establish stacking context */
+  display: flex;                 /* Optional - to control child layout */
+  justify-content: center;       /* Optional */
+  align-items: center;           /* Optional */
+}
