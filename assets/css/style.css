@@ -1349,3 +1349,9 @@ section .container {
   color: #ddd;
   text-align: center;
 }
+.image-gallery img[alt="CAD Model of Blade System"],
+.image-gallery img[alt="Motor Housing CAD"],
+.image-gallery img[alt="Top-Down SLA Diagram"] {
+  width: 600px !important;
+  height: auto !important;
+}
