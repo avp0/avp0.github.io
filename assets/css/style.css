@@ -1341,6 +1341,15 @@ section .container {
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
+.image-gallery embed,
+.image-gallery object {
+  width: 800px;              /* same as image width */
+  max-width: 90%;            /* keep responsive for smaller screens */
+  height: auto;              /* maintain aspect ratio if possible */
+  min-height: 600px;         /* ensure enough height to view PDF pages */
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
 
 /* Captions */
 .image-gallery figcaption {
