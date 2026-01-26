@@ -1358,3 +1358,15 @@ section .container {
   color: #ddd;
   text-align: center;
 }
+/* Certificates should not inherit project-card sizing */
+#education .portfolio-item {
+  height: auto !important;
+  display: block !important;
+}
+
+#projects .portfolio-item {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
