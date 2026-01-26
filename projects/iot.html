@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>IoT Design Project (Coming Soon)</title>
+  <title>Robotic Shoe Remover and Shelfer</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -19,7 +20,7 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -34,41 +35,189 @@
       ← Back to Portfolio
     </a>
   </div>
+  
   <main id="main">
     <div class="portfolio-details">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640">IoT Design Project (Coming Soon)</h2>
+            <h2 style="color:#12d640">Robotic Shoe Remover and Shelfer</h2>
             <ul>
-              <li><strong>Timeline</strong>: Expected Winter 2025</li>
-              <li><strong>Relevant Skills</strong>: IoT, Embedded Design, Rapid Prototyping, User-Centered Design, ESP32</li>
+              <li><strong>Course</strong>: ME 100 - Electronics for the Internet of Things</li>
+              <li><strong>Relevant Skills</strong>: IoT Systems Design, ESP32 Microcontrollers, Sensor Integration, Actuator Control, IMU Navigation, Embedded Systems, MicroPython, 3D Printing, Rapid Prototyping</li>
             </ul>
 
             <p>
-              This project is part of an IoT-focused course, where students will conceptualize, design, and prototype an innovative IoT application. 
-              The project is still under development and will be completed in Winter 2025.
+              <h4>Background</h4>
+              Removing shoes upon entering a home presents challenges for many people, whether due to inconvenience, limited mobility, or difficulty bending down. Existing solutions such as shoe horns, adjustable footwear, or manual assistance offer partial relief but lack a fully hands-free, autonomous option. This project addresses these challenges through an integrated electromechanical solution combining automated shoe removal with robotic shelving.
             </p>
 
-            <h4>Planned Deliverables</h4>
-            <ul>
-              <li><strong>Concept Outline</strong>: Slides explaining identified need, users, requirements, and approach</li>
-              <li><strong>Design Review</strong></li>
-              <li><strong>Final Outcome</strong>: Prototype demonstration and slides summarizing the process.</li>
-            </ul>
+            <p>
+              <h4>Goals</h4>
+              The system was designed to meet the following objectives:
+              <ul>
+                <li>Detect user presence via load cell sensing in shoe entry box</li>
+                <li>Autonomously remove footwear using linear actuator-based stabilization</li>
+                <li>Provide safety feedback through piezoelectric buzzer indicator</li>
+                <li>Enable wireless communication between shoe box and mobile robot via ESP-NOW protocol</li>
+                <li>Navigate robot autonomously using IMU-based position tracking and ultrasonic sensing</li>
+                <li>Retrieve and transport shoe to designated shelf location with minimal user intervention</li>
+              </ul>
+            </p>
 
-            <p style="color:gray;"><em>Updates and results will be added once the project is completed in Winter 2025.</em></p>
+            <p>
+              <h4>Design and Implementation</h4>
+              <ul>
+                <li><strong>System Architecture:</strong>
+                  <ul>
+                    <li>Dual ESP32 microcontroller system: one for shoe box actuation, one for mobile robot control</li>
+                    <li>Wireless communication via ESP-NOW protocol for real-time coordination between subsystems</li>
+                    <li>Modular design enabling independent testing and integration of shoe removal and shelving components</li>
+                  </ul>
+                </li>
 
-            <div style="margin-top: 20px;">
-              <p><strong>Concept Idea:</strong></p>
+                <li><strong>Shoe Removal Subsystem:</strong>
+                  <ul>
+                    <li>10 kg load cell with HX-711 amplifier for weight-based shoe detection (threshold: 8 kg)</li>
+                    <li>12V linear actuator controlled via BTS7960 43A H-bridge motor driver for shoe stabilization</li>
+                    <li>Piezoelectric buzzer providing audible feedback when safe to remove foot from platform</li>
+                    <li>3D-printed base plate with integrated load cell mounting and actuator attachment points</li>
+                    <li>MicroPython code implementing load cell taring, threshold-based actuation triggering, and ESP-NOW signal transmission</li>
+                  </ul>
+                </li>
 
-              <div class="image-gallery">
-                <figure>
-                  <img src="../assets/img/project/iot/conceptIdea.PNG" alt="Concept Idea">
-                  <figcaption>Concept Idea: Smart Drink Mixer</figcaption>
-                </figure>
+                <li><strong>Robot Shelving Subsystem:</strong>
+                  <ul>
+                    <li>Four-wheel omnidirectional mobile platform with individual motor control for precise maneuvering</li>
+                    <li>LSM6DSOX IMU for position tracking via acceleration integration with threshold-based noise filtering</li>
+                    <li>HC-SR04 ultrasonic sensor for final positioning alignment (target distance: ~8 cm)</li>
+                    <li>Servo-actuated lever arm for shoe scooping and placement</li>
+                    <li>Custom 3D-printed chassis, gripper arm, and motor mounting brackets</li>
+                    <li>MicroPython navigation logic combining IMU dead reckoning with ultrasonic proximity correction</li>
+                  </ul>
+                </li>
+
+                <li><strong>Navigation and Control:</strong>
+                  <ul>
+                    <li>IMU acceleration threshold filtering (>0.5 m/s²) to minimize drift from double integration</li>
+                    <li>Velocity-limited robot motion to ensure consistent threshold detection without overshoot</li>
+                    <li>Ultrasonic sensor activation triggered by IMU-based position estimate for final alignment</li>
+                    <li>Servo arm deployment upon ultrasonic confirmation of shelf proximity</li>
+                  </ul>
+                </li>
+
+                <li><strong>Manufacturing and Prototyping:</strong>
+                  <ul>
+                    <li>Designed components in SolidWorks and Onshape for FDM 3D printing (PLA material)</li>
+                    <li>Iterative tolerance adjustments to compensate for printer-induced dimensional variations</li>
+                    <li>Modular assembly approach enabling component-level testing and replacement</li>
+                    <li>Circuit breadboarding and wire management for reliable electrical connections</li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
+
+            <p>
+              <h4>Challenges and Solutions</h4>
+              <ul>
+                <li><strong>IMU Drift Compensation:</strong> Threshold-based acceleration filtering prevented cumulative integration errors while maintaining sufficient sensitivity for position tracking</li>
+                <li><strong>Wheel Attachment:</strong> Designed custom 3D-printed hubs with adjusted tolerances to account for manufacturing variations in small-diameter shaft connections</li>
+                <li><strong>Structural Integrity:</strong> Linear actuator forces exceeded PLA strength limits; redesigned base as single-piece print to eliminate fastener failure points</li>
+                <li><strong>Print Bed Constraints:</strong> 256mm × 256mm printer limited component size; adopted modular design where mechanical loads permitted segmented construction</li>
+              </ul>
+            </p>
+
+            <p>
+              <h4>Outcome</h4>
+              Successfully demonstrated autonomous shoe removal and shelving system with the following capabilities:
+              <ul>
+                <li>Reliable weight-based shoe detection with 8 kg threshold sensitivity</li>
+                <li>Safe, hands-free shoe release via linear actuator stabilization</li>
+                <li>Wireless ESP-NOW communication triggering robot retrieval sequence</li>
+                <li>IMU-guided navigation with ultrasonic proximity correction for accurate shelf placement</li>
+                <li>Complete end-to-end operation requiring no manual user intervention after initial foot placement</li>
+              </ul>
+              Future improvements would include enhanced gripper arm design for multi-level shelf placement, strengthened base plate materials, and refined wheel mounting for improved omnidirectional mobility.
+            </p>
+
+            <!-- Demo Video -->
+            <div style="margin-top: 40px;">
+              <h4>Demonstration Video</h4>
+              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+                <iframe 
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                  src="https://www.youtube.com/embed/eVaiJQHA-1U" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
               </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div style="margin-top: 40px;">
+              <p><strong>Image Gallery:</strong></p>
+              <div class="image-gallery">
+
+                <figure>
+                  <img src="../assets/img/project/iot/initialsketchedidea.png" alt="Initial Concept Sketch">
+                  <figcaption>Initial Design Concept</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/initialcircuitdiagram.png" alt="Initial Circuit Diagram">
+                  <figcaption>Initial Circuit Diagram</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/baseplatetop.png" alt="Base Plate Top View">
+                  <figcaption>Shoe Plate CAD (Top View)</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/baseplatefront.png" alt="Base Plate Front View">
+                  <figcaption>Shoe Plate CAD (Front View)</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/carbarecad.png" alt="Robot Car CAD">
+                  <figcaption>Robot Car CAD</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/board.JPG" alt="Circuit Board">
+                  <figcaption>Assembled Circuit Board</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/actuatorsystem.JPG" alt="Actuator System">
+                  <figcaption>Linear Actuator System with Breadboard</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/shelfer.png" alt="Robot Shelfer">
+                  <figcaption>Robot Shelfer (Mobile Platform)</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/iot/iotcover.jpg" alt="Final Prototype">
+                  <figcaption>Complete System Prototype</figcaption>
+                </figure>
+
+              </div>
+            </div>
+
+            <!-- Downloads Section -->
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 8px;">
+              <p><strong>Downloads:</strong></p>
+              <ul style="list-style: none; padding-left: 0;">
+                <li>
+                  <a href="../assets/img/project/iot/finalReport.pdf" download style="color: #12d640; text-decoration: none; font-weight: 500;">
+                    📄 Final Project Report (PDF)
+                  </a>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -76,6 +225,7 @@
       </div>
     </div>
   </main>
+  
   <script src="../assets/js/lightbox.js"></script>
 </body>
 </html>

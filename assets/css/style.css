@@ -1329,15 +1329,19 @@ section .container {
 .image-gallery figure {
   margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Images */
+/* Images - FIXED SIZE */
 .image-gallery img,
 .image-gallery video {
   width: 100%;
-  height: auto;
+  height: 300px;  /* Fixed height - adjust this value as needed */
+  object-fit: contain;  /* Keeps aspect ratio, adds padding if needed */
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  background: #000000;  
 }
 .image-gallery embed,
 .image-gallery object {
