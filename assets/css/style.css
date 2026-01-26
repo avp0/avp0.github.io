@@ -1319,10 +1319,9 @@ section .container {
 
 /* Image Gallery Grid */
 .image-gallery {
-  display: flex;                 /* stack images vertically */
-  flex-direction: column;
-  align-items: center;           /* center images horizontally */
-  gap: 60px;                     /* space between images (adjust as needed) */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 30px;
 }
 
@@ -1335,8 +1334,7 @@ section .container {
 /* Images */
 .image-gallery img,
 .image-gallery video {
-  width: 800px;                  /* doubled size (adjust as desired) */
-  max-width: 90%;                /* responsive on smaller screens */
+  width: 100%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
