@@ -26,6 +26,14 @@
 </head>
 
 <body>
+  <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
+    <a href="../index.html" 
+       style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
+       onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
+       onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
+      ← Back to Portfolio
+    </a>
+  </div>
   <!-- ======= Portfolio Details ======= -->
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
@@ -107,17 +115,21 @@
     </figure>
  <!-- Image 1: Policy Poster Presentation (PDF Embed) -->
     <figure>
-      <embed src="../assets/img/project/osint/poster.pdf"
-             type="application/pdf">
-      <figcaption>Policy Poster Presentation (PDF)</figcaption>
-    </figure>
+  <figcaption>
+    <a href="../assets/img/project/osint/poster.pdf" download>
+      Policy Poster Presentation (Click to download)
+    </a>
+  </figcaption>
+</figure>
 
-    <!-- Image 4: Full Presentation (PDF preview placeholder) -->
-    <figure>
-      <embed src="../assets/img/project/osint/ovrprez.pdf"
-             type="application/pdf">
-      <figcaption>Full Presentation (PDF)</figcaption>
-    </figure>
+<figure>
+  <figcaption>
+    <a href="../assets/img/project/osint/ovrprez.pdf" download>
+      Full Presentation (Click to download)
+    </a>
+  </figcaption>
+</figure>
+
   </div>
 </div>
 
@@ -127,5 +139,7 @@
       </div>
     </div>
   </main>
+  <script src="../assets/js/lightbox.js"></script>
+
 </body>
 </html>

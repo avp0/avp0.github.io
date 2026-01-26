@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,7 +20,9 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
+  
+
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -27,6 +30,14 @@
 
 <body>
   <!-- ======= Portfolio Details ======= -->
+   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
+    <a href="../index.html" 
+       style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
+       onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
+       onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
+      ← Back to Portfolio
+    </a>
+  </div>
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
       <div class="container">
@@ -152,12 +163,14 @@
       <img src="../assets/img/project/turbine/prototype.png" alt="Fabricated Prototype">
       <figcaption>Fabricated Prototype</figcaption>
     </figure>
-      <video autoplay loop muted playsinline aria-label="Testing">
-        <source src="../assets/img/project/turbine/turbineTesting.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption>Turbine Testing</figcaption>
-    </figure>
+      <figure>
+  <video autoplay loop muted playsinline aria-label="Testing">
+    <source src="../assets/img/project/turbine/turbineTesting.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Turbine Testing</figcaption>
+</figure>
+
     <figure>
       <img src="../assets/img/project/turbine/feadeflectionplot.png" alt="FEA Deflection Plot">
       <figcaption>FEA Deflection Plot</figcaption>
@@ -173,10 +186,13 @@
       <figcaption>FEA FOS Plot</figcaption>
     </figure>
     <figure>
-      <embed src="../assets/img/project/turbine/finalReport.pdf"
-             type="application/pdf">
-      <figcaption>Final Project Report (PDF)</figcaption>
-    </figure>
+  <figcaption>
+    <a href="../assets/img/project/turbine/finalReport.pdf" download>
+      Final Project Report (Click to download)
+    </a>
+  </figcaption>
+</figure>
+
 
 
 
@@ -191,5 +207,8 @@
       </div>
     </div>
   </main>
+  <script src="../assets/js/lightbox.js"></script>
+
 </body>
+
 </html>

@@ -1368,3 +1368,66 @@ section .container {
   flex-direction: column;
   justify-content: center;
 }
+.image-gallery figcaption a {
+  color: #12d640;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.image-gallery figcaption a:hover {
+  text-decoration: underline;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: zoom-out;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lightbox .close:hover {
+  color: #bbb;
+}
+
+.lightbox .close::before {
+  content: '×';
+}
+
+.image-gallery img {
+  cursor: zoom-in;
+}
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  background: rgba(28, 125, 50, 0.2);
+  color: #12d640;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(28, 125, 50, 0.4);
+  color: #15bb62;
+}

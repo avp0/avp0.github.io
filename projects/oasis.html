@@ -47,17 +47,27 @@
       margin-top: 25px;
     }
 
-    /* Style for embedded PDF */
-    .pdf-embed {
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    /* Optional: make the PDF link look consistent inside gallery */
+    .image-gallery figcaption a {
+      color: #12d640;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .image-gallery figcaption a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
+  <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
+    <a href="../index.html" 
+       style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
+       onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
+       onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
+      ← Back to Portfolio
+    </a>
+  </div>
   <!-- ======= Portfolio Details ======= -->
   <main id="main">
     <div id="portfolio-details" class="portfolio-details">
@@ -71,13 +81,13 @@
             </ul>
 
             <p>
-<h4>Background</h4>
-  Many travelers and students often encounter unsafe conditions due to poorly lit streets, lack of monitoring, or limited access to real-time safety data. Existing navigation apps prioritize <strong> speed over security</strong>, leaving a gap for <strong> safety-oriented routing </strong>. To address this, our team at the 
-  <a href="https://www.inacademy.eu/" target="_blank" style="color:#00bfff; font-style:italic;">
-    European Innovation Academy
-  </a>
-  developed <strong>Oasis</strong> — a navigation app that prioritizes <strong> well-lit, CCTV-monitored routes </strong> and enables <strong>community-driven, real-time incident reporting</strong> to improve personal safety during navigation.
-</p>
+              <h4>Background</h4>
+              Many travelers and students often encounter unsafe conditions due to poorly lit streets, lack of monitoring, or limited access to real-time safety data. Existing navigation apps prioritize <strong> speed over security</strong>, leaving a gap for <strong> safety-oriented routing </strong>. To address this, our team at the
+              <a href="https://www.inacademy.eu/" target="_blank" style="color:#00bfff; font-style:italic;">
+                European Innovation Academy
+              </a>
+              developed <strong>Oasis</strong> — a navigation app that prioritizes <strong> well-lit, CCTV-monitored routes </strong> and enables <strong>community-driven, real-time incident reporting</strong> to improve personal safety during navigation.
+            </p>
 
             <p>
               <h4>Goals</h4>
@@ -131,19 +141,17 @@
               <h4>Outcome</h4>
               <ul>
                 <li>
-  Successfully launched early prototype and 
-  <a href="https://ap27vikings.wixsite.com/oasis" target="_blank" style="color:#00bfff; font-style:italic;">
-    website
-  </a>
-  demonstrating Oasis functionality.
-</li>
-
+                  Successfully launched early prototype and
+                  <a href="https://ap27vikings.wixsite.com/oasis" target="_blank" style="color:#00bfff; font-style:italic;">
+                    website
+                  </a>
+                  demonstrating Oasis functionality.
+                </li>
                 <li>Validated interest with 360+ signups in first week of launch</li>
                 <li>Identified clear differentiators vs. competitors: <strong>safety-optimzed routing + verified incident reports</strong></li>
                 <li>Established growth milestones: Rome pilot (6 months), EU rollout (1–3 years), B2B scaling (4–10 years).</li>
               </ul>
             </p>
-
 
             <!-- Center-aligned CTA Buttons -->
             <div class="cta-container">
@@ -151,86 +159,64 @@
               <a href="https://www.figma.com/proto/9h9NPBIIF0f55oMX7I8IkH/OASIS-prototype?page-id=0%3A1&node-id=1-96&viewport=1210%2C-162%2C0.38&t=eSJtGe4BU1cWxtZZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A96" target="_blank" class="cta-btn">📱 View Clickable App Prototype</a>
             </div>
 
-          <!-- Image Gallery with PDF Embed -->
-<div style="margin-top: 20px;">
-  <p><strong>Image Gallery & Documents:</strong></p>
+            <!-- Image Gallery & Documents -->
+            <div style="margin-top: 20px;">
+              <p><strong>Image Gallery & Documents:</strong></p>
 
-  <div class="image-gallery">
+              <!-- NOTE: only ONE image-gallery container (removed nested duplicate) -->
+              <div class="image-gallery">
 
-    <div class="image-gallery">
+                
 
+                <!-- Safety Route Map (Start Screen) -->
+                <figure>
+                  <img src="../assets/img/project/Oasis/start.png" alt="Safety Route Map Example">
+                  <figcaption>Safety Route Map Example</figcaption>
+                </figure>
 
-  <!-- 3: Main App Features Overview -->
-  <figure>
-    <img src="../assets/img/project/Oasis/Main Features.png"
-         alt="Main Features Overview">
-    <figcaption>Main App Features Overview</figcaption>
-  </figure>
+                <!-- Live Guidance Mode -->
+                <figure>
+                  <img src="../assets/img/project/Oasis/guidance.png" alt="Guidance Mode">
+                  <figcaption>Live Guidance Mode</figcaption>
+                </figure>
 
+                <!-- Successful Safety Report -->
+                <figure>
+                  <img src="../assets/img/project/Oasis/succesfulReport.png" alt="Successful Safety Report">
+                  <figcaption>Successful Safety Report</figcaption>
+                </figure>
 
-  <!-- 6: Safety Route Map (Start Screen) -->
-  <figure>
-    <img src="../assets/img/project/Oasis/start.png"
-         alt="Safety Route Map Example">
-    <figcaption>Safety Route Map Example</figcaption>
-  </figure>
+                <!-- Reporting Safety Issue -->
+                <figure>
+                  <img src="../assets/img/project/Oasis/report.png" alt="Report Safety Issue">
+                  <figcaption>Report a Safety Issue</figcaption>
+                </figure>
 
-  <!-- 7: Live Guidance Mode -->
-  <figure>
-    <img src="../assets/img/project/Oasis/guidance.png"
-         alt="Guidance Mode">
-    <figcaption>Live Guidance Mode</figcaption>
-  </figure>
+                <!-- Leaving Route Alert -->
+                <figure>
+                  <img src="../assets/img/project/Oasis/leaving.png" alt="Leaving Route Alert">
+                  <figcaption>Leaving Route Alert</figcaption>
+                </figure>
 
-  <!-- 8: Successful Safety Report -->
-  <figure>
-    <img src="../assets/img/project/Oasis/succesfulReport.png"
-         alt="Successful Safety Report">
-    <figcaption>Successful Safety Report</figcaption>
-  </figure>
+                
 
-  <!-- 9: Reporting Safety Issue -->
-  <figure>
-    <img src="../assets/img/project/Oasis/report.png"
-         alt="Report Safety Issue">
-    <figcaption>Report a Safety Issue</figcaption>
-  </figure>
+                <!-- Pitch Deck as downloadable link (replaces embedded PDF) -->
+                <figure>
+                  <figcaption>
+                    <a href="../assets/img/project/Oasis/pitchdeck.pdf" download>
+                      Pitch Deck (PDF)
+                    </a>
+                  </figcaption>
+                </figure>
 
-  <!-- 10: Leaving Route Alert -->
-  <figure>
-    <img src="../assets/img/project/Oasis/leaving.png"
-         alt="Leaving Route Alert">
-    <figcaption>Leaving Route Alert</figcaption>
-  </figure>
-
-  <!-- 11: Printed Poster of Oasis Concept -->
-  <figure>
-    <img src="../assets/img/project/Oasis/OASIS PRINT.jpeg"
-         alt="Printed Poster of Oasis Concept">
-    <figcaption>Oasis AD Poster</figcaption>
-  </figure>
-
-  <!-- 12: Embedded Pitch Deck PDF -->
-  <figure>
-    <object data="../assets/img/project/Oasis/pitchdeck.pdf"
-            type="application/pdf"
-            class="pdf-embed">
-      <p>Your browser doesn’t support embedded PDFs.
-         <a href="../assets/img/project/Oasis/pitchdeck.pdf" target="_blank">Open PDF</a>.
-      </p>
-    </object>
-    <figcaption>Pitch Deck</figcaption>
-  </figure>
-
-
-  </div>
-</div>
-
+              </div>
+            </div>
 
           </div>
         </div>
       </div>
     </div>
   </main>
+  <script src="../assets/js/lightbox.js"></script>
 </body>
 </html>

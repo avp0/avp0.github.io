@@ -4,7 +4,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-!(function($) {
+if (window.jQuery) !(function($) {
+
   "use strict";
 
   // Nav Menu
@@ -144,8 +145,12 @@
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox();
-  });
+ // $(document).ready(function() {
+  //  $('.venobox').venobox();
+ // });
 
 })(jQuery);
+else console.warn("jQuery not loaded; template features disabled.");
+// Image gallery lightbox (fullscreen on click)
+// Image gallery lightbox (fullscreen on click)
+// Image gallery lightbox (fullscreen on click)
