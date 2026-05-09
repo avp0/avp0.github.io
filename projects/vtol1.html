@@ -20,7 +20,6 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <!-- <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -28,92 +27,83 @@
 
 <body>
   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html" 
+    <a href="../index.html"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
-      ← Back to Portfolio
+      &larr; Back to Portfolio
     </a>
   </div>
-  
+
   <main id="main">
     <div class="portfolio-details">
       <div class="container">
-        
+
         <!-- PROJECT 1: HUMAN-CARRYING eVTOL -->
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
             <h2 style="color:#12d640">Human-Carrying eVTOL: Landing Gear System</h2>
             <ul>
-              <li><strong>Organization</strong>: VTOL @ Berkeley (President & Lead Mechanical Engineer)</li>
-              <li><strong>Relevant Skills</strong>: SolidWorks, Fusion360, FAA Compliance, FEA, Carbon-Fiber Design, Materials Optimization, Rapid Prototyping</li>
+              <li><strong>Organization</strong>: VTOL @ Berkeley (President &amp; Lead Mechanical Engineer)</li>
+              <li><strong>Relevant Skills</strong>: SolidWorks, Fusion 360, Composite Structures, Landing Load Analysis, FEA, FAA Load Case Interpretation, Carbon-Fiber Layup, Additive Manufacturing, Mechanical Integration</li>
             </ul>
 
+            <h4>Background</h4>
             <p>
-              <h4>Background</h4>
-              As President and Lead Mechanical Engineer of VTOL @ Berkeley, I directed the design and development of Berkeley's first human-carrying eVTOL aircraft. This ambitious project required securing industry partnerships and delivering flight-critical systems that met FAA standards. The landing gear system was designed to absorb touchdown loads while minimizing weight—a key constraint for electric vertical takeoff and landing aircraft.
+              As President and Lead Mechanical Engineer of VTOL @ Berkeley, I directed mechanical development for Berkeley's first human-carrying eVTOL aircraft. My work centered on the landing gear architecture: a lightweight composite skid system sized for touchdown loads, ground handling, and integration with the primary airframe. The design had to balance stiffness, impact absorption, manufacturability, and mass efficiency, all of which directly affect thrust margin and flight endurance on an electric aircraft.
             </p>
 
-            <p>
-              <h4>Goals</h4>
-              The landing gear system had to meet stringent requirements:
-              <ul>
-                <li>Support FAA-compliant load cases for safe touchdown and ground operations</li>
-                <li>Validate structural integrity under worst-case loading conditions via FEA</li>
-                <li>Minimize mass while maintaining safety margins for human flight operations</li>
-                <li>Integrate seamlessly with aircraft structure and tiltrotor mechanisms</li>
-              </ul>
-            </p>
+            <h4>Goals</h4>
+            <ul>
+              <li>Translate FAA-relevant landing load cases into component-level force and moment requirements</li>
+              <li>Validate skid tubes, clamps, and airframe interfaces under vertical impact and lateral ground loads</li>
+              <li>Reduce structural mass while maintaining adequate factors of safety for piloted operation</li>
+              <li>Design interfaces that preserve airframe alignment, serviceability, and compatibility with tiltrotor hardware</li>
+            </ul>
 
-            <p>
-              <h4>Design and Execution</h4>
-              <ul>
-                <li><strong>Landing Gear Skid Design:</strong>
-                  <ul>
-                    <li>Designed carbon-fiber landing gear skid with optimized geometry for impact absorption</li>
-                    <li>Developed custom carbon-fiber clamp system to secure skid tubes to main airframe structure</li>
-                    <li>Created edge sock prototypes to provide smooth, cushioned contact points during landing</li>
-                    <li>Iterated through multiple prototype versions using 3D printing for rapid testing and validation</li>
-                  </ul>
-                </li>
+            <h4>Design and Execution</h4>
+            <ul>
+              <li><strong>Landing Gear Skid Design:</strong>
+                <ul>
+                  <li>Designed a carbon-fiber skid layout to distribute touchdown loads through the main airframe while keeping the contact patch stable</li>
+                  <li>Developed custom clamp geometry for transferring skid-tube reaction loads into the fuselage structure without crushing the composite tubes</li>
+                  <li>Prototyped compliant edge socks to tune ground contact behavior, reduce stress concentration, and protect skid ends during touchdown</li>
+                  <li>Used 3D-printed scale hardware to verify envelope, fastener access, and assembly sequence before committing to composite fabrication</li>
+                </ul>
+              </li>
 
-                <li><strong>Structural Analysis & Optimization:</strong>
-                  <ul>
-                    <li>Calculated FAA-compliant load cases including hard landing scenarios (4G vertical acceleration)</li>
-                    <li>Performed FEA simulations in SolidWorks and Fusion360 to validate component strength</li>
-                    <li>Optimized carbon-fiber layup schedules to reduce component mass by 15%</li>
-                    <li>Improved overall aircraft thrust-to-weight ratio through systematic weight reduction</li>
-                  </ul>
-                </li>
+              <li><strong>Structural Analysis and Optimization:</strong>
+                <ul>
+                  <li>Calculated hard-landing load cases including 4G vertical acceleration and off-axis touchdown scenarios</li>
+                  <li>Performed FEA in SolidWorks and Fusion 360 to evaluate clamp stress, skid deflection, and interface reaction forces</li>
+                  <li>Iterated composite layup assumptions and bracket geometry to remove unnecessary material from low-stress regions</li>
+                  <li>Reduced landing gear mass by approximately 15%, improving aircraft thrust-to-weight margin</li>
+                </ul>
+              </li>
 
-                <li><strong>Manufacturing & Integration:</strong>
-                  <ul>
-                    <li>Fabricated carbon-fiber components using composite layup techniques</li>
-                    <li>3D printed mounting brackets and interface components for assembly integration</li>
-                    <li>Designed arm mounts to attach landing gear assembly to main fuselage structure</li>
-                    <li>Conducted ground testing to verify load distribution and structural integrity</li>
-                  </ul>
-                </li>
-              </ul>
-            </p>
+              <li><strong>Manufacturing and Integration:</strong>
+                <ul>
+                  <li>Fabricated composite components with layup methods selected for directional stiffness and impact tolerance</li>
+                  <li>Printed and test-fit mounting brackets, clamp prototypes, and interface pieces to converge on assembly tolerances</li>
+                  <li>Designed arm mounts and landing gear attachment points around load path continuity into the fuselage</li>
+                  <li>Used ground-fit checks and static loading to verify contact geometry, clearance, and structural response</li>
+                </ul>
+              </li>
+            </ul>
 
-            <p>
-              <h4>Outcome</h4>
-              <ul>
-                <li>Successfully designed FAA-compliant landing gear system for human-carrying eVTOL</li>
-                <li>Achieved 15% mass reduction in carbon-fiber structures through optimization</li>
-                <li>Validated structural performance under worst-case load conditions via FEA</li>
-                <li>Improved aircraft thrust-to-weight efficiency, enabling longer flight endurance</li>
-                <li>Delivered flight-ready landing gear system integrated with tiltrotor mechanisms</li>
-              </ul>
-            </p>
+            <h4>Outcome</h4>
+            <ul>
+              <li>Delivered an integrated composite landing gear concept for a human-carrying eVTOL airframe</li>
+              <li>Reduced landing gear structural mass by approximately 15% through geometry and layup iteration</li>
+              <li>Validated clamp and skid performance against hard-landing load cases using FEA-backed design reviews</li>
+              <li>Improved thrust-to-weight margin by reducing non-propulsive structural mass</li>
+              <li>Produced flight-configuration hardware and interfaces compatible with the broader tiltrotor aircraft assembly</li>
+            </ul>
 
-            <!-- Image Gallery for Landing Gear -->
             <div style="margin-top: 40px;">
               <p><strong>Image Gallery (Click to zoom):</strong></p>
               <div class="image-gallery">
-                
                 <figure>
                   <img src="../assets/img/project/vtol/landinggearcad.png" alt="Landing Gear CAD Model">
                   <figcaption>Landing Gear CAD Assembly</figcaption>
@@ -126,12 +116,12 @@
 
                 <figure>
                   <img src="../assets/img/project/vtol/landinggearsockzoomed.png" alt="Landing Gear Sock Detail">
-                  <figcaption>Edge Sock Detail (Zoomed)</figcaption>
+                  <figcaption>Edge Sock Detail</figcaption>
                 </figure>
 
                 <figure>
                   <img src="../assets/img/project/vtol/carbonfiberclampprototype.png" alt="Carbon Fiber Clamp Prototype">
-                  <figcaption>Carbon Fiber Clamp Prototype</figcaption>
+                  <figcaption>Carbon-Fiber Clamp Prototype</figcaption>
                 </figure>
 
                 <figure>
@@ -151,26 +141,24 @@
 
                 <figure>
                   <img src="../assets/img/project/vtol/armmount.png" alt="Arm Mount Assembly">
-                  <figcaption>Arm Mount for Landing Gear Attachment</figcaption>
+                  <figcaption>Arm Mount Interface</figcaption>
                 </figure>
 
                 <figure>
-                  <img src="../assets/img/project/vtol/sketch.jpg" alt="Design Sketch">
+                  <img src="../assets/img/project/vtol/sketch.jpg" alt="Landing gear design sketch">
                   <figcaption>System Design Sketch</figcaption>
                 </figure>
 
                 <figure>
-                  <img src="../assets/img/project/vtol/smallScaleSockPrint.jpg" alt="Small Scale Sock Prints">
+                  <img src="../assets/img/project/vtol/smallScaleSockPrint.jpg" alt="Small-scale sock prints">
                   <figcaption>Small-Scale Test Prints</figcaption>
                 </figure>
-
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- DIVIDER -->
         <hr style="margin: 60px 0; border: 1px solid rgba(255,255,255,0.1);">
 
         <!-- PROJECT 2: CUSTOM TILTROTOR UAV -->
@@ -178,112 +166,125 @@
           <div class="col-lg-12 portfolio-info">
             <h2 style="color:#12d640">Custom Tiltrotor UAV</h2>
             <ul>
-              <li><strong>Relevant Skills</strong>: Aerodynamic Design, Ansys CFD, ArduPilot Configuration, 3D Printing (PLA Aero), Carbon-Fiber Fabrication, Flight Testing</li>
+              <li><strong>Relevant Skills</strong>: Airframe Architecture, Tiltrotor Mechanism Design, Ansys CFD, ArduPilot VTOL Configuration, Servo Linkage Design, Carbon-Fiber Spars, PLA Aero Additive Manufacturing, Flight Testing</li>
             </ul>
 
+            <h4>Background</h4>
             <p>
-              <h4>Background</h4>
-              Tiltrotor UAVs combine the efficiency of fixed-wing cruise flight with the vertical takeoff capability of multirotor systems. I led the mechanical and aerodynamic design of a custom tiltrotor UAV, defining the complete airframe geometry and controls architecture. The aircraft features a trimotor configuration with two tilting front motors and one fixed rear motor, enabling smooth hover-to-cruise transitions.
+              Tiltrotor UAVs combine the hover authority of a multirotor with the cruise efficiency of a fixed-wing aircraft. I led the mechanical and aerodynamic design of a custom trimotor tiltrotor UAV with two servo-actuated front propulsion units and one fixed rear motor. The project required airframe sizing, motor placement, tilt-axis packaging, control-surface integration, and structural design for a lightweight aircraft capable of controlled hover-to-cruise transition.
             </p>
 
-            <p>
-              <h4>Goals</h4>
-              <ul>
-                <li>Design complete airframe geometry optimized for both hover and cruise flight regimes</li>
-                <li>Minimize rotor wake interference and aerodynamic drag through simulation-driven design</li>
-                <li>Develop stable flight control system capable of autonomous hover-to-cruise transitions</li>
-                <li>Fabricate lightweight, robust structure using advanced manufacturing techniques</li>
-              </ul>
-            </p>
+            <h4>Goals</h4>
+            <ul>
+              <li>Define an airframe geometry that balances hover stability, cruise lift-to-drag performance, and manufacturability</li>
+              <li>Package tilting propulsion units to minimize rotor wake interference with the wing and tail surfaces</li>
+              <li>Integrate control surfaces, servo linkages, and ArduPilot parameters for repeatable transition behavior</li>
+              <li>Fabricate a lightweight structure using printed aerodynamic shells and carbon-fiber primary load paths</li>
+            </ul>
 
-            <p>
-              <h4>Design and Execution</h4>
-              <ul>
-                <li><strong>Airframe & Aerodynamics:</strong>
-                  <ul>
-                    <li>Defined airframe geometry with 1340mm wingspan and modular construction for easy transport</li>
-                    <li>Selected Eppler E205 airfoil for optimal low-speed efficiency and stability</li>
-                    <li>Optimized rotor placement via Ansys CFD simulations to reduce wake interference between motors</li>
-                    <li>Minimized drag through careful fairing design and clean integration of tiltrotor mechanisms</li>
-                    <li>Achieved zero pitching moment at cruise conditions through precise center-of-gravity placement</li>
-                  </ul>
-                </li>
+            <h4>Design and Execution</h4>
+            <ul>
+              <li><strong>Airframe and Aerodynamics:</strong>
+                <ul>
+                  <li>Defined a 1340 mm wingspan airframe with modular wing and fuselage sections for transport, repair, and rapid iteration</li>
+                  <li>Selected the Eppler E205 airfoil to support low-Reynolds-number lift generation and benign stall behavior</li>
+                  <li>Used Ansys CFD to compare rotor placement and identify interference risks between prop wash, wing surfaces, and tail control authority</li>
+                  <li>Reduced parasitic drag by fairing motor mounts, wiring routes, and tiltrotor interfaces into the printed airframe geometry</li>
+                  <li>Located battery, avionics, and payload mass to align the center of gravity with transition and cruise stability requirements</li>
+                </ul>
+              </li>
 
-                <li><strong>Tiltrotor Mechanisms:</strong>
-                  <ul>
-                    <li>Designed and fabricated servo-actuated tilt mechanisms for front motors (0-90° range)</li>
-                    <li>Integrated carbon-fiber booms and PETG motor mounts for structural rigidity</li>
-                    <li>Optimized blade geometry and pitch settings for efficient thrust in both hover and cruise</li>
-                    <li>Validated mechanical strength under operational loads using FEA analysis</li>
-                  </ul>
-                </li>
+              <li><strong>Tiltrotor Mechanisms:</strong>
+                <ul>
+                  <li>Designed servo-actuated front motor tilt mechanisms with a 0-90 degree operating range for hover and forward-flight modes</li>
+                  <li>Integrated carbon-fiber booms with printed motor mounts to maintain torsional stiffness under propeller thrust and gyroscopic loading</li>
+                  <li>Packaged tilt servos, horns, and linkages to minimize backlash while preserving service access</li>
+                  <li>Validated motor-arm connectors and tilt hardware against thrust, bending, and landing-induced loads</li>
+                </ul>
+              </li>
 
-                <li><strong>Manufacturing & Assembly:</strong>
-                  <ul>
-                    <li>3D printed airframe components using lightweight PLA Aero filament with cubic subdivision infill</li>
-                    <li>Fabricated carbon-fiber spars and structural tubes for primary load paths</li>
-                    <li>Assembled modular wing sections with integrated cable routing for clean installation</li>
-                    <li>Installed T-Motor F90 1300KV motors with 7-inch propellers for optimal thrust efficiency</li>
-                  </ul>
-                </li>
+              <li><strong>Manufacturing and Assembly:</strong>
+                <ul>
+                  <li>Printed aerodynamic shells and brackets in PLA Aero using lightweight infill strategies for stiffness-to-mass efficiency</li>
+                  <li>Used carbon-fiber spars, booms, and structural tubes as primary bending and torsional load paths</li>
+                  <li>Integrated cable routing through modular wing and tail sections to protect wiring and simplify assembly</li>
+                  <li>Installed T-Motor F90 1300 KV motors with 7-inch propellers to balance hover thrust, current draw, and cruise efficiency</li>
+                </ul>
+              </li>
 
-                <li><strong>Flight Controls & Testing:</strong>
-                  <ul>
-                    <li>Configured ArduPilot flight controller for tricopter VTOL operation</li>
-                    <li>Tuned transition parameters (Q_TILT_RATE, Q_TRANSITION_MS) for smooth mode changes</li>
-                    <li>Implemented vectored yaw control through differential motor tilting (±15° yaw authority)</li>
-                    <li>Conducted flight testing to validate hover stability and cruise performance</li>
-                    <li>Achieved stable autonomous transitions with 4+ hour endurance on 4S Li-Ion battery</li>
-                  </ul>
-                </li>
-              </ul>
-            </p>
+              <li><strong>Flight Controls and Testing:</strong>
+                <ul>
+                  <li>Configured ArduPilot for tricopter VTOL behavior, including hover stabilization and transition control</li>
+                  <li>Tuned transition parameters such as Q_TILT_RATE and Q_TRANSITION_MS to reduce pitch transients during mode changes</li>
+                  <li>Implemented vectored yaw authority through differential front-motor tilt and coordinated motor output</li>
+                  <li>Used lightweight bent-wire control linkages for RC-scale control surfaces, informed by <a href="https://www.flitetest.com/articles/paper-clip-control-linkages" target="_blank" rel="noopener" style="color:#12d640;">Flite Test's paper-clip linkage method</a>: fast to form and easy to replace, but best kept short because flexibility, durability, and aft servo placement can affect control precision and center of gravity</li>
+                  <li>Conducted bench checks, servo range validation, and flight testing to verify hover stability and cruise response</li>
+                  <li>Targeted long-endurance operation using a 4S Li-ion pack and efficient fixed-wing cruise configuration</li>
+                </ul>
+              </li>
+            </ul>
 
-            <p>
-              <h4>Outcome</h4>
-              <ul>
-                <li>Successfully developed custom tiltrotor UAV with complete airframe and controls integration</li>
-                <li>Achieved stable hover-to-cruise transitions through optimized ArduPilot tuning</li>
-                <li>Validated aerodynamic performance through CFD analysis and flight testing</li>
-                <li>Demonstrated 4+ hour flight endurance with efficient cruise performance at 60-70 km/h</li>
-                <li>Created modular, manufacturable design suitable for various mission payloads</li>
-              </ul>
-            </p>
+            <h4>Outcome</h4>
+            <ul>
+              <li>Developed a custom trimotor tiltrotor UAV with integrated airframe, propulsion, control-surface, and avionics packaging</li>
+              <li>Validated the mechanical architecture through completed aircraft assembly, tilt mechanism testing, and flight-control setup</li>
+              <li>Used CFD-informed layout decisions to reduce rotor-wing interference and improve cruise configuration cleanliness</li>
+              <li>Produced a modular airframe architecture suitable for payload swaps, repair, and iterative flight testing</li>
+              <li>Established a mechanical baseline for further transition tuning, endurance validation, and mission-specific payload integration</li>
+            </ul>
 
-            <!-- Image Gallery for Custom Tiltrotor -->
             <div style="margin-top: 40px;">
               <p><strong>Image Gallery (Click to zoom):</strong></p>
               <div class="image-gallery">
-
                 <figure>
-                  <img src="../assets/img/project/vtol/parts.JPG" alt="3D Printed Components">
-                  <figcaption>3D Printed Airframe Components (PLA Aero)</figcaption>
+                  <img src="../assets/img/project/vtol/topviewcomplete.jpg" alt="Completed Tiltrotor UAV top view">
+                  <figcaption>Completed Tiltrotor UAV (Top View)</figcaption>
                 </figure>
 
                 <figure>
-                  <img src="../assets/img/project/vtol/motorarmconnectorcad.png" alt="Motor Arm Connector CAD">
+                  <img src="../assets/img/project/vtol/frontviewcomplete.jpg" alt="Completed Tiltrotor UAV front view">
+                  <figcaption>Completed Tiltrotor UAV (Front View)</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/vtol/parts.JPG" alt="3D printed aircraft components">
+                  <figcaption>Printed Airframe Components</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/vtol/plaaero.jpg" alt="PLA Aero printed structure">
+                  <figcaption>PLA Aero Lightweight Structure</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/vtol/motorarmconnectorcad.png" alt="Motor arm connector CAD">
                   <figcaption>Motor Arm Connector CAD</figcaption>
                 </figure>
 
                 <figure>
-                  <img src="../assets/img/project/vtol/motorarmconnectorcadv2.png" alt="Motor Arm Connector Detail">
-                  <figcaption>Motor Arm Connector (Detailed View)</figcaption>
+                  <img src="../assets/img/project/vtol/motorarmconnectorcadv2.png" alt="Motor arm connector detail">
+                  <figcaption>Motor Arm Connector Detail</figcaption>
                 </figure>
 
                 <figure>
-                  <video autoplay loop muted playsinline aria-label="Build Timelapse">
-                    <source src="../assets/img/project/vtol/vtoltimelapse.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                  <figcaption>Assembly & Wiring Timelapse</figcaption>
+                  <img src="../assets/img/project/vtol/motortilted.JPG" alt="Tiltrotor motor mechanism actuated">
+                  <figcaption>Actuated Tiltrotor Mechanism</figcaption>
                 </figure>
 
-                <!-- Placeholder for finished aircraft -->
                 <figure>
-                  <img src="../assets/img/project/vtol/finished_tiltrotor_placeholder.png" alt="Completed Tiltrotor UAV">
-                  <figcaption>Completed Custom Tiltrotor UAV (Coming Soon)</figcaption>
+                  <img src="../assets/img/project/vtol/tailControlLinkage.JPG" alt="Tail control linkage">
+                  <figcaption>Tail Control Linkage</figcaption>
                 </figure>
 
+                <figure>
+                  <img src="../assets/img/project/vtol/wingcontrollinkage.jpg" alt="Wing control linkage">
+                  <figcaption>Wing Control Linkage</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/vtol/flapattached.jpg" alt="Trailing edge flap attached">
+                  <figcaption>Trailing Edge Flap Assembly</figcaption>
+                </figure>
               </div>
             </div>
 
@@ -293,7 +294,7 @@
       </div>
     </div>
   </main>
-  
+
   <script src="../assets/js/lightbox.js"></script>
 </body>
 </html>

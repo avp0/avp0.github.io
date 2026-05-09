@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>BRSL Research Experiences</title>
+  <title>HushLight: Automated Noise-Deterrent Device</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,34 +28,180 @@
 
 <body>
   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html" 
+    <a href="../index.html"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
-      ← Back to Portfolio
+      &larr; Back to Portfolio
     </a>
   </div>
+
   <main id="main">
     <div class="portfolio-details">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 portfolio-info">
-  <br>
-  <h2 style="color:#12d640">Product Development Class Project</h2>
+            <br>
+            <h2 style="color:#12d640">HushLight: Automated Noise-Deterrent Device for Shared Living</h2>
+            <ul>
+              <li><strong>Course</strong>: ME 110 - Product Development</li>
+              <li><strong>Relevant Skills</strong>: Product Development, Customer Discovery, Concept Selection, ESP32, MEMS Microphone Sensing, LED Deterrent Systems, Circuit Prototyping, 3D Printing, BOM/Costing, User Testing</li>
+            </ul>
 
-  <p>
-    <strong>Status:</strong> <span style="color:yellow;">In Progress</span>
-  </p>
+            <h4>Background</h4>
+            <p>
+              HushLight addresses a common problem in dorms, apartments, and shared houses: noise conflicts that affect sleep and focus, but are awkward to resolve through repeated direct confrontation. Existing noise-monitoring products mostly serve landlords or short-term rental hosts by sending notifications after the fact. HushLight instead acts locally, giving the noise-maker immediate visual feedback at the source.
+            </p>
+            <p>
+              The product is a compact tabletop device that monitors ambient sound level, compares it to a user-defined threshold, and activates a bright LED ring when the room becomes too loud. The device is privacy-preserving by design: it measures sound level only and does not record, store, or transmit audio content.
+            </p>
 
-  <p>
-    This project is part of an ongoing product development course.
-    More information will be added as the project progresses.
-  </p>
-</div>
+            <h4>Goals</h4>
+            <ul>
+              <li>Create a non-confrontational way to reduce disruptive noise in shared living spaces</li>
+              <li>Provide clear feedback within seconds of a noise threshold being exceeded</li>
+              <li>Support adjustable quiet expectations across different schedules and living situations</li>
+              <li>Keep the product affordable for student users, with a target retail price under $50</li>
+              <li>Build a functional prototype that is compact, easy to set up, and visually understandable without explanation</li>
+            </ul>
+
+            <h4>Customer Needs and Product Specs</h4>
+            <p>
+              Customer research highlighted seven major needs: non-confrontational operation, immediate feedback, undisturbed sleep and focus, adjustable thresholds and scheduling, privacy preservation, ease of setup, affordability, and support for positive roommate dynamics. These needs were translated into measurable design targets for the prototype.
+            </p>
+            <ul>
+              <li><strong>Footprint:</strong> Under 20 cm x 20 cm for dorm and apartment use</li>
+              <li><strong>Response Time:</strong> LED activation within 2 seconds of threshold crossing</li>
+              <li><strong>Threshold Control:</strong> User-adjustable sound threshold, with future support for scheduled quiet hours</li>
+              <li><strong>Activation Delay:</strong> Adjustable delay window to reject short transient sounds</li>
+              <li><strong>Privacy:</strong> No audio recording or storage; dB-level processing only</li>
+              <li><strong>Cost:</strong> Manufacturing cost target under $20 and retail price target under $50</li>
+              <li><strong>Setup:</strong> Plug-and-play setup in under 1 minute for an inexperienced user</li>
+            </ul>
+
+            <h4>Concept Selection</h4>
+            <p>
+              The concept phase explored 60 possible interventions, then narrowed them into finalists across visual alerts, distributed systems, directional deterrents, mechanical alerts, and passive mitigation. A weighted decision matrix prioritized deterrence effectiveness, build feasibility, market differentiation, prototype cost, and usability.
+            </p>
+            <p>
+              The selected prototype path used the simplest high-impact architecture: a minimalist enclosure with a microphone, threshold knob, on/off switch, and high-brightness LED ring. This kept the electronics shared with more aggressive lighting concepts while reducing build risk enough to fabricate and test within the semester.
+            </p>
+
+            <h4>Design and Implementation</h4>
+            <ul>
+              <li><strong>System Architecture:</strong>
+                <ul>
+                  <li>ESP32 DevKit V1 reads microphone data, computes sound level, reads the threshold knob, and controls the LED output</li>
+                  <li>INMP441 I2S MEMS microphone captures ambient sound for dB-level processing without storing audio</li>
+                  <li>12V COB LED ring provides the visual deterrent when the sound threshold is exceeded</li>
+                  <li>Logic-level MOSFET switches the 12V LED ring from a 3.3V ESP32 GPIO signal</li>
+                </ul>
+              </li>
+
+              <li><strong>Electrical Design:</strong>
+                <ul>
+                  <li>Single 12V wall supply powers the LED ring and steps down for the microcontroller electronics</li>
+                  <li>Panel-mounted potentiometer gives the user physical threshold control</li>
+                  <li>Gate resistor, pull-down resistor, and bulk capacitance improve switching reliability and startup behavior</li>
+                  <li>Breadboard prototype validated the sensing and LED control loop before a future PCB or perfboard revision</li>
+                </ul>
+              </li>
+
+              <li><strong>Mechanical Prototype:</strong>
+                <ul>
+                  <li>3D-printed enclosure creates a compact tabletop form factor with the LED ring visible on the front face</li>
+                  <li>Front-panel controls preserve a simple, appliance-like interaction model</li>
+                  <li>Internal volume houses the ESP32, microphone module, switching electronics, and wiring</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>Testing and Observations</h4>
+            <p>
+              The assembled prototype demonstrated the core behavior: the microphone detected elevated sound, the ESP32 triggered the output logic, and the LED ring clearly communicated that the room was too loud. Early user reactions were positive because the signal was immediately understandable and felt more neutral than a direct confrontation.
+            </p>
+            <ul>
+              <li>Microphone threshold detection worked reliably during initial qualitative testing</li>
+              <li>LED ring activation was visible enough to function as a deterrent in a shared room</li>
+              <li>Moving-average detection helped reject short transient sounds such as isolated impacts</li>
+              <li>Prototype form factor fit the target footprint and remained small enough for common-area placement</li>
+              <li>Identified improvements included potentiometer calibration, softer diffusion, cleaner internal wiring, and broader quantitative user testing</li>
+            </ul>
+
+            <h4>Business Model and Market Fit</h4>
+            <p>
+              HushLight targets college students and young adults in shared housing, with secondary opportunities in university housing, family homes, and light-duty shared workspaces. The business model centers on a direct-to-consumer hardware sale, campus bookstore distribution, and future bulk sales to housing programs.
+            </p>
+            <p>
+              The value proposition is a privacy-first, no-subscription device that reduces noise at the source. Unlike landlord-oriented monitors or passive solutions like headphones and white noise, HushLight is designed for the person living with the disruption and gives the room an immediate shared signal.
+            </p>
+
+            <h4>Outcome and Next Steps</h4>
+            <ul>
+              <li>Built and tested a functional noise-triggered LED deterrent prototype</li>
+              <li>Validated the core interaction: sound exceeds threshold, device responds, users understand the alert</li>
+              <li>Kept the hardware architecture low-cost enough to remain compatible with the under-$50 retail goal</li>
+              <li>Defined next revision work: custom PCB or fixed perfboard, calibrated threshold dial, diffuser, app-based scheduling, noise event history, and ESP-NOW multi-unit support</li>
+            </ul>
+
+            <!-- Demo Video -->
+            <div style="margin-top: 40px;">
+              <h4>Demonstration Video</h4>
+              <video controls playsinline style="width: 100%; max-width: 900px; background: #000;">
+                <source src="../assets/img/project/prodDev/hushlight-demo.mov" type="video/quicktime">
+                Your browser does not support embedded video playback.
+              </video>
+            </div>
+
+            <!-- Image Gallery -->
+            <div style="margin-top: 40px;">
+              <p><strong>Image Gallery (Click to zoom):</strong></p>
+              <div class="image-gallery">
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/prototype-assembly.jpg" alt="HushLight prototype during assembly">
+                  <figcaption>Prototype Assembly</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/internal-circuitry-1.jpg" alt="HushLight internal circuitry">
+                  <figcaption>Internal Circuitry</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/internal-circuitry-2.jpg" alt="HushLight wiring inside enclosure">
+                  <figcaption>Wiring Inside Housing</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/front-off.jpg" alt="HushLight prototype with LED off">
+                  <figcaption>Front View - Light Off</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/front-on-v1.jpg" alt="HushLight prototype with LED on">
+                  <figcaption>Front View - Light On</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/front-on-v2.jpg" alt="HushLight prototype second illuminated view">
+                  <figcaption>Illuminated Prototype</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="../assets/img/project/prodDev/threshold-control.jpg" alt="HushLight threshold control knob">
+                  <figcaption>Threshold Control</figcaption>
+                </figure>
+
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </main>
+
   <script src="../assets/js/lightbox.js"></script>
 </body>
 </html>
