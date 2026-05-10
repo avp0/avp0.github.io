@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --vts-green: #22c55e;
+      --vts-red: #d71920;
+      --ink: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .vts-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+      isolation: isolate;
+    }
+
+    .base {
+      position: absolute;
+      inset: 7% 6%;
+      width: 88%;
+      height: 86%;
+      object-fit: cover;
+      filter: saturate(0.98) contrast(1.03);
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+      animation: baseIn 0.85s ease both;
+      z-index: 1;
+    }
+
+    .logo {
+      position: absolute;
+      left: 9%;
+      top: 9%;
+      width: min(48%, 220px);
+      max-height: 20%;
+      object-fit: contain;
+      filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.16));
+      opacity: 0;
+      transform: translateY(-8px);
+      animation: logoIn 0.7s ease 0.35s both;
+      z-index: 3;
+    }
+
+    .route {
+      position: absolute;
+      left: 30%;
+      right: 18%;
+      bottom: 35%;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--vts-green);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.14);
+      transform: scaleX(0);
+      transform-origin: left center;
+      animation: routeDraw 1.2s ease 0.75s both;
+      z-index: 3;
+    }
+
+    .route::before,
+    .route::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--vts-green);
+      border: 2px solid var(--ink);
+      transform: translateY(-50%) scale(0);
+      animation: pinPop 0.35s ease 1.55s both;
+    }
+
+    .route::before {
+      left: -4px;
+    }
+
+    .route::after {
+      right: -4px;
+      animation-delay: 1.8s;
+    }
+
+    .vax {
+      position: absolute;
+      width: min(33%, 150px);
+      right: 20%;
+      bottom: 36%;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+      opacity: 0;
+      transform: translate(-110%, -20%) rotate(-3deg);
+      animation: vaxMove 2.2s cubic-bezier(0.2, 0.75, 0.2, 1) 0.95s both;
+      z-index: 4;
+    }
+
+    .pulse {
+      position: absolute;
+      right: 17%;
+      bottom: 33%;
+      width: 18px;
+      aspect-ratio: 1;
+      border: 2px solid var(--vts-red);
+      border-radius: 50%;
+      opacity: 0;
+      animation: pulse 2.8s ease 2.2s infinite;
+      z-index: 2;
+    }
+
+    @keyframes baseIn {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes logoIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes routeDraw {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes pinPop {
+      to {
+        transform: translateY(-50%) scale(1);
+      }
+    }
+
+    @keyframes vaxMove {
+      0% {
+        opacity: 0;
+        transform: translate(-110%, -20%) rotate(-3deg);
+      }
+
+      24% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, -20%) rotate(-3deg);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.75;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(2.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="vts-card" aria-label="Vaccinate the States">
+    <img class="base" src="thumbnail.jpg" alt="">
+    <img class="logo" src="logo.png" alt="Vaccinate the States">
+    <span class="route" aria-hidden="true"></span>
+    <img class="vax" src="vax.png" alt="">
+    <span class="pulse" aria-hidden="true"></span>
+  </div>
+</body>
+</html>

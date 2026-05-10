@@ -18,6 +18,7 @@
   --panel-purple-hover: #291743;
   --text-primary: #d8d8d8;
   --text-secondary: #9fa3ad;
+  --themed-thumbnail-bg: #000000;
 }
 
 html {
@@ -26,6 +27,7 @@ html {
 
 html.light-theme {
   color-scheme: light;
+  --themed-thumbnail-bg: transparent;
 }
 
 body {
@@ -197,8 +199,8 @@ html.light-theme .section-title h2::after {
 }
 
 html.light-theme .portfolio .portfolio-wrap {
-  background: #ffffff;
-  box-shadow: 0 12px 34px rgba(32, 33, 36, 0.1);
+  background: transparent;
+  box-shadow: none;
 }
 
 html.light-theme .portfolio .portfolio-wrap::before {
@@ -636,6 +638,15 @@ section .container {
   font-weight: 700;
   font-size: 26px;
   color: var(--accent);
+}
+
+.about-photo-caption {
+  margin: 12px 0 0;
+  color: #d7d3dd;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .about-me .content ul {
@@ -1556,7 +1567,8 @@ section .container {
   margin-bottom: 0.75rem;
 }
 
-.portfolio-wrap img {
+.portfolio-wrap img,
+.portfolio-wrap video {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1587,15 +1599,21 @@ section .container {
   box-sizing: border-box;
 }
 
-#projects .portfolio-wrap img {
+#projects .portfolio-wrap img,
+#projects .portfolio-wrap video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+#projects .portfolio-wrap .portfolio-video-zoomed-out {
+  object-fit: contain;
+  background: #000;
+}
+
 #projects .project-contain-wrap {
   padding: 24px 34px;
-  background: #ffffff;
+  background: var(--themed-thumbnail-bg);
 }
 
 #projects .project-logo-wrap {
@@ -1605,6 +1623,25 @@ section .container {
 
 #projects .project-logo-wrap img,
 #projects .project-contain-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#projects .portfolio-logo-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+#projects .brsl-logo-wrap,
+#projects .animated-logo-wrap {
+  padding: 0;
+  background: var(--themed-thumbnail-bg) !important;
+}
+
+#projects .animated-logo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: contain;

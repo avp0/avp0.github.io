@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --engie-blue: #00aeef;
+      --deep-blue: #003a70;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo-card {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 18px 24px;
+      overflow: hidden;
+      background: transparent;
+      isolation: isolate;
+    }
+
+    .logo-card::before {
+      content: "";
+      position: absolute;
+      left: 9%;
+      right: 9%;
+      top: 24%;
+      height: 42%;
+      border-top: 10px solid rgba(0, 174, 239, 0.32);
+      border-radius: 50% 50% 0 0;
+      transform: translateY(-16px) scaleX(0.35);
+      transform-origin: center;
+      animation: arcOpen 1.25s cubic-bezier(0.2, 0.85, 0.2, 1) both;
+      z-index: 1;
+    }
+
+    .logo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 24%, rgba(255, 255, 255, 0.55) 48%, transparent 68%);
+      transform: translateX(-120%);
+      animation: lightSweep 4.8s ease-in-out 1.4s infinite;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .logo {
+      position: relative;
+      z-index: 2;
+      width: min(88%, 430px);
+      max-height: 72%;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 22px rgba(0, 58, 112, 0.16));
+      animation: logoIn 0.95s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+    }
+
+    .baseline {
+      position: absolute;
+      left: 20%;
+      right: 20%;
+      bottom: 26%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(0, 174, 239, 0.45), transparent);
+      transform: scaleX(0);
+      animation: baselineIn 1.2s ease 0.45s both;
+      z-index: 1;
+    }
+
+    @keyframes logoIn {
+      0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.94);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes arcOpen {
+      to {
+        transform: translateY(0) scaleX(1);
+      }
+    }
+
+    @keyframes baselineIn {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes lightSweep {
+      0%, 48% {
+        transform: translateX(-120%);
+      }
+
+      72%, 100% {
+        transform: translateX(120%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-card" aria-label="ENGIE">
+    <span class="baseline" aria-hidden="true"></span>
+    <img class="logo" src="engie-logo-source.png" alt="ENGIE">
+  </div>
+</body>
+</html>

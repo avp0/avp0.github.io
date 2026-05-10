@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --oasis-navy: #001f4f;
+      --oasis-gold: #f1d184;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-card {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      isolation: isolate;
+    }
+
+    .logo-card::before {
+      content: "";
+      position: absolute;
+      width: 76%;
+      height: 24%;
+      bottom: 26%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(0, 31, 79, 0.14), transparent 68%);
+      transform: scaleX(0.72);
+      opacity: 0;
+      animation: shadowIn 0.9s ease 0.22s both;
+      z-index: 1;
+    }
+
+    .logo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 24%, rgba(241, 209, 132, 0.46) 48%, transparent 67%);
+      transform: translateX(-115%);
+      animation: lightSweep 5s ease-in-out 1.2s infinite;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .logo {
+      position: relative;
+      z-index: 2;
+      width: min(76%, 320px);
+      max-height: 76%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(0, 31, 79, 0.16));
+      transform: translateY(-60px);
+      animation: logoRise 1s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+    }
+
+    .spark {
+      position: absolute;
+      width: 6px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--oasis-gold);
+      box-shadow: 0 0 14px rgba(241, 209, 132, 0.85);
+      opacity: 0;
+      z-index: 2;
+      animation: sparkle 3.8s ease-in-out infinite;
+    }
+
+    .spark.one {
+      top: 33%;
+      left: 20%;
+      animation-delay: 0.9s;
+    }
+
+    .spark.two {
+      top: 61%;
+      right: 18%;
+      animation-delay: 1.55s;
+    }
+
+    @keyframes logoRise {
+      0% {
+        opacity: 0;
+        transform: translateY(-36px) scale(0.94);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(-60px) scale(1);
+      }
+    }
+
+    @keyframes shadowIn {
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes sparkle {
+      0%, 70%, 100% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+
+      12%, 28% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes lightSweep {
+      0%, 48% {
+        transform: translateX(-115%);
+      }
+
+      72%, 100% {
+        transform: translateX(115%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-card" aria-label="Oasis">
+    <span class="spark one" aria-hidden="true"></span>
+    <span class="spark two" aria-hidden="true"></span>
+    <img class="logo" src="oasis-logo-source.png" alt="Oasis">
+  </div>
+</body>
+</html>
