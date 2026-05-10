@@ -28,7 +28,7 @@
 
 <body>
   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html"
+    <a href="../index.html#projects"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640">HushLight: Automated Noise-Deterrent Device for Shared Living</h2>
+            <h2 style="color:var(--accent)">HushLight: Automated Noise-Deterrent Device for Shared Living</h2>
             <ul>
               <li><strong>Course</strong>: ME 110 - Product Development</li>
               <li><strong>Relevant Skills</strong>: Product Development, Customer Discovery, Concept Selection, ESP32, MEMS Microphone Sensing, LED Deterrent Systems, Circuit Prototyping, 3D Printing, BOM/Costing, User Testing</li>
@@ -50,10 +50,10 @@
 
             <h4>Background</h4>
             <p>
-              HushLight addresses a common problem in dorms, apartments, and shared houses: noise conflicts that affect sleep and focus, but are awkward to resolve through repeated direct confrontation. Existing noise-monitoring products mostly serve landlords or short-term rental hosts by sending notifications after the fact. HushLight instead acts locally, giving the noise-maker immediate visual feedback at the source.
+              HushLight addresses a common systems problem in dorms, apartments, and shared houses: noise conflicts that affect sleep and focus, but are awkward to resolve through repeated direct confrontation. Existing noise-monitoring products mostly serve landlords or short-term rental hosts by sending delayed notifications. HushLight instead closes the feedback loop locally, sensing ambient sound and giving the noise-maker immediate visual feedback at the source.
             </p>
             <p>
-              The product is a compact tabletop device that monitors ambient sound level, compares it to a user-defined threshold, and activates a bright LED ring when the room becomes too loud. The device is privacy-preserving by design: it measures sound level only and does not record, store, or transmit audio content.
+              The product is a compact tabletop electromechanical device that monitors ambient sound level, compares the signal to a user-defined threshold, and switches a high-brightness LED ring when the room becomes too loud. The device is privacy-preserving by design: it processes sound level only and does not record, store, or transmit audio content.
             </p>
 
             <h4>Goals</h4>
@@ -67,7 +67,7 @@
 
             <h4>Customer Needs and Product Specs</h4>
             <p>
-              Customer research highlighted seven major needs: non-confrontational operation, immediate feedback, undisturbed sleep and focus, adjustable thresholds and scheduling, privacy preservation, ease of setup, affordability, and support for positive roommate dynamics. These needs were translated into measurable design targets for the prototype.
+              Customer research highlighted seven major needs: non-confrontational operation, immediate feedback, undisturbed sleep and focus, adjustable thresholds and scheduling, privacy preservation, ease of setup, affordability, and support for positive roommate dynamics. I translated those needs into engineering specifications for enclosure footprint, response time, threshold control, power architecture, and cost.
             </p>
             <ul>
               <li><strong>Footprint:</strong> Under 20 cm x 20 cm for dorm and apartment use</li>
@@ -81,10 +81,10 @@
 
             <h4>Concept Selection</h4>
             <p>
-              The concept phase explored 60 possible interventions, then narrowed them into finalists across visual alerts, distributed systems, directional deterrents, mechanical alerts, and passive mitigation. A weighted decision matrix prioritized deterrence effectiveness, build feasibility, market differentiation, prototype cost, and usability.
+              The concept phase explored 60 possible interventions, then narrowed them into finalists across visual alerts, distributed systems, directional deterrents, mechanical alerts, and passive mitigation. A weighted decision matrix compared each concept against deterrence effectiveness, build feasibility, market differentiation, prototype cost, usability, and integration risk.
             </p>
             <p>
-              The selected prototype path used the simplest high-impact architecture: a minimalist enclosure with a microphone, threshold knob, on/off switch, and high-brightness LED ring. This kept the electronics shared with more aggressive lighting concepts while reducing build risk enough to fabricate and test within the semester.
+              The selected prototype used a simple, high-impact architecture: a 3D-printed enclosure with a MEMS microphone, threshold knob, on/off switch, MOSFET-switched LED ring, and ESP32 controller. This kept the electronics extensible while reducing build risk enough to fabricate, wire, and test within the semester.
             </p>
 
             <h4>Design and Implementation</h4>
@@ -118,7 +118,7 @@
 
             <h4>Testing and Observations</h4>
             <p>
-              The assembled prototype demonstrated the core behavior: the microphone detected elevated sound, the ESP32 triggered the output logic, and the LED ring clearly communicated that the room was too loud. Early user reactions were positive because the signal was immediately understandable and felt more neutral than a direct confrontation.
+              The assembled prototype demonstrated the full sensing-control-output loop: the microphone detected elevated sound, the ESP32 filtered the signal and triggered the output logic, and the LED ring clearly communicated that the room was too loud. Early user reactions were positive because the signal was immediately understandable and felt more neutral than a direct confrontation.
             </p>
             <ul>
               <li>Microphone threshold detection worked reliably during initial qualitative testing</li>

@@ -27,7 +27,7 @@
 
 <body>
   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html" 
+    <a href="../index.html#projects"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
@@ -41,25 +41,25 @@
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640">Novel Blade System for Top-Down SLA 3D Printing</h2>
+            <h2 style="color:var(--accent)">Novel Blade System for Top-Down SLA 3D Printing</h2>
             <ul>
               <li><strong>Relevant Skills</strong>: SolidWorks, Mechanical Design, 3D Printing, FEA, Experimental Design, Data Analysis, Technical Documentation</li>
             </ul>
 
             <p>
               <h4>Background</h4>
-              In Spring 2024, as part of MSE 127: Introduction to Additive Manufacturing, my project partner and I developed a stirring blade system for top-down SLA 3D printers. A persistent issue in stereolithography: resin contamination, settling, and viscosity changes due to UV exposure and debris. These problems reduce print resolution, shorten resin lifetime, and often require costly replacement. Our project aimed to address these challenges by designing, fabricating, and testing a novel blade mechanism for resin mixing.
+              In Spring 2024, as part of MSE 127: Introduction to Additive Manufacturing, my project partner and I developed a stirring blade system for top-down SLA 3D printers. Top-down stereolithography can suffer from resin settling, contamination, and viscosity drift caused by UV exposure, debris, and incomplete mixing. These effects reduce print resolution, shorten resin life, and increase material waste, so our project focused on a low-cost mechanical mixing mechanism that could maintain more uniform resin conditions during printer operation.
             </p>
 
             <p>
               <h4>Goals</h4>
               The project objectives were to:
               <ul>
-                <li>Design and fabricate a mechanical blade system to maintain uniform resin viscosity</li>
-                <li>Prevent resin settling, minimize air bubbles, and reduce contamination</li>
-                <li>Extend resin usability lifetime and minimize wastage</li>
-                <li>Improve overall print quality and dimensional accuracy in top-down SLA systems</li>
-                <li>Ensure the system was cost-effective, modular, and compatible with existing SLA printers</li>
+                <li>Design and fabricate a mechanical blade system to maintain more uniform resin viscosity</li>
+                <li>Promote bulk fluid circulation while minimizing bubble generation and contamination risk</li>
+                <li>Extend resin usability and reduce material waste</li>
+                <li>Improve print consistency and dimensional accuracy in top-down SLA systems</li>
+                <li>Keep the system modular, low-cost, and compatible with existing printer architectures</li>
               </ul>
             </p>
 
@@ -68,15 +68,15 @@
               <ul>
                 <li><strong>Design and Modeling:</strong>
                   <ul>
-                    <li>Created CAD models in SolidWorks of an impeller-style blade optimized for radial and axial fluid flow</li>
-                    <li>Incorporated a motor housing and vertical rail system to allow stirrer height adjustment</li>
-                    <li>Used filleted edges to minimize stress concentrations and improve manufacturability with FDM 3D printing</li>
+                    <li>Created SolidWorks models of an impeller-style blade intended to generate both radial and axial fluid circulation</li>
+                    <li>Integrated a motor housing and vertical rail system so stirrer height could be adjusted relative to resin level</li>
+                    <li>Used filleted blade and housing features to reduce stress concentrations and improve FDM printability</li>
                   </ul>
                 </li>
 
                 <li><strong>Simulation and Fabrication:</strong>
                   <ul>
-                    <li>Conducted FEA to validate structural durability under load and identify weak points</li>
+                    <li>Conducted FEA to check structural durability under representative loading and identify weak regions before fabrication</li>
                     <li>Fabricated components with PLA using a Bambu P1S FDM printer</li>
                     <li>Iterated on blade geometry after testing larger prototypes for flow efficiency and bubble minimization</li>
                   </ul>
@@ -87,7 +87,7 @@
                     <li>Designed a water–food coloring test setup to simulate resin mixing</li>
                     <li>Measured time for different “viscosity levels” (1, 4, 10 drops of food coloring) to return to a uniform state</li>
                     <li>Average mixing times: ~4 s (1 drop), ~41 s (4 drops), ~55 s (10 drops)</li>
-                    <li>Observed increasing trends consistent with viscosity-resistance to mixing, validating blade effectiveness</li>
+                    <li>Observed increasing mixing time with higher simulated viscosity, supporting the expected relationship between fluid resistance and homogenization time</li>
                   </ul>
                 </li>
 
@@ -109,7 +109,7 @@
                 <li>Demonstrated cost-effective fabrication via FDM 3D printing.</li>
                 <li>Provided proof-of-concept data linking higher viscosity with longer mixing times, confirming system viability.</li>
               </ul>
-              While real resin testing was not completed primarily due to resource and time limitations, the system showed strong potential for improving resin quality and consistency in top-down SLA 3D Printing.
+              While real resin testing was not completed due to resource and time limitations, the prototype showed a credible mechanical path for improving resin consistency in top-down SLA 3D printing.
             </p>
 
 
@@ -153,7 +153,7 @@
     <p><strong>Downloads:</strong></p>
     <ul style="list-style: none; padding-left: 0;">
       <li>
-        <a href="../assets/img/project/mseblade/finalReport.pdf" download style="color: #12d640; text-decoration: none; font-weight: 500;">
+        <a href="../assets/img/project/mseblade/finalReport.pdf" download style="color: var(--accent); text-decoration: none; font-weight: 500;">
           📄 Final Project Report (PDF)
         </a>
       </li>

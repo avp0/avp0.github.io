@@ -31,7 +31,7 @@
 <body>
   <!-- ======= Portfolio Details ======= -->
    <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html" 
+    <a href="../index.html#projects"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
@@ -44,19 +44,19 @@
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640">Miniature Wind Turbine</h2>
+            <h2 style="color:var(--accent)">Miniature Wind Turbine</h2>
             <ul>
               <li><strong>Relevant Skills</strong>: SolidWorks CAD & FEA, Aerodynamics, Mechanical Design, Structural Analysis, Rapid Prototyping/Iterative Design, Experimental Testing, Technical Documentation</li>
             </ul>
 
             <p>
               <h4>Background</h4>
-              In Fall 2023, I designed, built, and tested a miniature wind turbine with my project team for ENGIN 26: Three-Dimensional Modeling for Design. The goal was to explore wind energy principles and deliver a turbine capable of maximizing power generation under strict constraints.
+              In Fall 2023, I designed, built, and tested a miniature wind turbine with my project team for ENGIN 26: Three-Dimensional Modeling for Design. The project required us to balance aerodynamic performance, structural stiffness, mass, manufacturability, and generator packaging within a constrained 3D-printed assembly.
             </p>
 
             <p>
               <h4>Goals</h4>
-              The turbine had to meet the following requirements:
+              The turbine had to meet the following engineering requirements:
               <ul>
                 <li>Minimum stiffness &gt;8 N/mm</li>
                 <li>Total mass &lt;350 g</li>
@@ -70,24 +70,24 @@
               <ul>
                 <li><strong>Blade Design:</strong>
                   <ul>
-                    <li>Final rotor design used 3 blades, each 2.5” in length.</li>
-                    <li>Symmetric airfoil selected to balance performance at low Reynolds numbers.</li>
-                    <li>Blades modeled in SolidWorks, then 3D printed.</li>
+                    <li>Final rotor design used three 2.5-inch blades to stay within the blade-length constraint while preserving swept area</li>
+                    <li>Symmetric airfoil selected to maintain manufacturability and stable low-Reynolds-number performance</li>
+                    <li>Blade geometry modeled in SolidWorks and fabricated through FDM printing for rapid iteration</li>
                   </ul>
                 </li>
 
                 <li><strong>Tower Design:</strong>
                   <ul>
-                    <li>Eiffel Tower-inspired, three-legged, radially symmetric design for stability</li>
-                    <li>Modular structure (top and bottom split into three parts) with male-female couplings for alignment</li>
-                    <li>Equilateral triangle cross-section, wide base tapering to minimize flow interference</li>
-                    <li>Filleted edges to reduce stress concentrations and improve aerodynamics</li>
+                    <li>Three-legged, radially symmetric tower architecture selected for lateral stability and repeatable load transfer</li>
+                    <li>Modular top and bottom sections split into three parts with male-female couplings for alignment during assembly</li>
+                    <li>Equilateral-triangle footprint with a wide base tapering upward to reduce mass and flow blockage near the rotor</li>
+                    <li>Filleted edges used to reduce stress concentrations and improve print quality</li>
                   </ul>
                 </li>
 
                 <li><strong>Simulation and Testing:</strong>
                   <ul>
-                    <li><strong>FEA (SolidWorks):</strong> Maximum displacement of 0.2145 mm under 9.81 N load. Factor of safety &gt;3 across tower</li>
+                    <li><strong>FEA (SolidWorks):</strong> Maximum displacement of 0.2145 mm under a 9.81 N load, with factor of safety &gt;3 across the tower</li>
                     <li><strong>Power Output:</strong> Peak power = 0.3908 W at ~4050 rpm (25 mph wind)</li>
                     <li><strong>Deflection Test:</strong> Withstood 1 kg load with only 0.94 mm displacement, confirming &gt;8 N/mm stiffness</li>
                     <li><strong>Efficiency:</strong> Experimental efficiency calculated as ~3.19% (0.3908 W / 12.236 W theoretical)</li>
@@ -112,7 +112,7 @@
                 <li>Peak Power: 0.3908 W</li>
                 <li>Efficiency: ~3.19%</li>
               </ul>
-              While efficiency was lower than theoretical, the project validated key aerodynamic and structural design principles for small-scale wind turbines.
+              Although measured efficiency was lower than the idealized theoretical limit, the build validated the rotor, tower, stiffness, and test methodology needed for small-scale wind turbine development.
             </p>
 
 
@@ -197,7 +197,7 @@
     <p><strong>Downloads:</strong></p>
     <ul style="list-style: none; padding-left: 0;">
       <li>
-        <a href="../assets/img/project/turbine/finalReport.pdf" download style="color: #12d640; text-decoration: none; font-weight: 500;">
+        <a href="../assets/img/project/turbine/finalReport.pdf" download style="color: var(--accent); text-decoration: none; font-weight: 500;">
           📄 Final Project Report (PDF)
         </a>
       </li>

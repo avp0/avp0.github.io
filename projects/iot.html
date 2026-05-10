@@ -28,7 +28,7 @@
 
 <body>
   <div style="position: relative; z-index: 10000; padding: 20px; background: rgba(0, 0, 0, 0.8); width: 100%;">
-    <a href="../index.html" 
+    <a href="../index.html#projects"
        style="display: inline-block; padding: 24px 48px; background: #9B86BD; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 23px; transition: all 0.3s ease;"
        onmouseover="this.style.background='#B8A3D6'; this.style.color='#FFFFFF'"
        onmouseout="this.style.background='#9B86BD'; this.style.color='#FFFFFF'">
@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col-lg-12 portfolio-info">
             <br>
-            <h2 style="color:#12d640">Robotic Shoe Remover and Shelfer</h2>
+            <h2 style="color:var(--accent)">Robotic Shoe Remover and Shelfer</h2>
             <ul>
               <li><strong>Course</strong>: ME 100 - Electronics for the Internet of Things</li>
               <li><strong>Relevant Skills</strong>: IoT Systems Design, ESP32 Microcontrollers, Sensor Integration, Actuator Control, IMU Navigation, Embedded Systems, MicroPython, 3D Printing, Rapid Prototyping</li>
@@ -50,19 +50,19 @@
 
             <p>
               <h4>Background</h4>
-              Removing shoes upon entering a home presents challenges for many people, whether due to inconvenience, limited mobility, or difficulty bending down. Existing solutions such as shoe horns, adjustable footwear, or manual assistance offer partial relief but lack a fully hands-free, autonomous option. This project addresses these challenges through an integrated electromechanical solution combining automated shoe removal with robotic shelving.
+              Removing shoes upon entering a home can be difficult for users with limited mobility, poor balance, or difficulty bending down. Existing solutions such as shoe horns, adjustable footwear, or manual assistance only solve part of the workflow. This project explored a fully hands-free electromechanical system that combines load sensing, linear actuation, wireless coordination, and mobile robotic shelving.
             </p>
 
             <p>
               <h4>Goals</h4>
               The system was designed to meet the following objectives:
               <ul>
-                <li>Detect user presence via load cell sensing in shoe entry box</li>
-                <li>Autonomously remove footwear using linear actuator-based stabilization</li>
-                <li>Provide safety feedback through piezoelectric buzzer indicator</li>
-                <li>Enable wireless communication between shoe box and mobile robot via ESP-NOW protocol</li>
-                <li>Navigate robot autonomously using IMU-based position tracking and ultrasonic sensing</li>
-                <li>Retrieve and transport shoe to designated shelf location with minimal user intervention</li>
+                <li>Detect user loading through a calibrated load cell in the shoe-entry platform</li>
+                <li>Use a linear actuator to stabilize the shoe and enable hands-free foot withdrawal</li>
+                <li>Provide clear safety feedback through a piezoelectric buzzer indicator</li>
+                <li>Coordinate the shoe-removal station and mobile robot over ESP-NOW</li>
+                <li>Navigate the robot using IMU-based dead reckoning with ultrasonic final-position correction</li>
+                <li>Retrieve and transport the shoe to a designated shelf location with minimal user intervention</li>
               </ul>
             </p>
 
@@ -71,7 +71,7 @@
               <ul>
                 <li><strong>System Architecture:</strong>
                   <ul>
-                    <li>Dual ESP32 microcontroller system: one for shoe box actuation, one for mobile robot control</li>
+                    <li>Dual-ESP32 architecture: one controller for shoe-box sensing and actuation, one for mobile robot motion control</li>
                     <li>Wireless communication via ESP-NOW protocol for real-time coordination between subsystems</li>
                     <li>Modular design enabling independent testing and integration of shoe removal and shelving components</li>
                   </ul>
@@ -82,18 +82,18 @@
                     <li>10 kg load cell with HX-711 amplifier for weight-based shoe detection (threshold: 8 kg)</li>
                     <li>12V linear actuator controlled via BTS7960 43A H-bridge motor driver for shoe stabilization</li>
                     <li>Piezoelectric buzzer providing audible feedback when safe to remove foot from platform</li>
-                    <li>3D-printed base plate with integrated load cell mounting and actuator attachment points</li>
+                    <li>3D-printed base plate with integrated load-cell mounting, actuator attachment points, and reinforced load paths</li>
                     <li>MicroPython code implementing load cell taring, threshold-based actuation triggering, and ESP-NOW signal transmission</li>
                   </ul>
                 </li>
 
                 <li><strong>Robot Shelving Subsystem:</strong>
                   <ul>
-                    <li>Four-wheel omnidirectional mobile platform with individual motor control for precise maneuvering</li>
+                    <li>Four-wheel omnidirectional mobile platform with independent motor control for compact maneuvering</li>
                     <li>LSM6DSOX IMU for position tracking via acceleration integration with threshold-based noise filtering</li>
                     <li>HC-SR04 ultrasonic sensor for final positioning alignment (target distance: ~8 cm)</li>
                     <li>Servo-actuated lever arm for shoe scooping and placement</li>
-                    <li>Custom 3D-printed chassis, gripper arm, and motor mounting brackets</li>
+                    <li>Custom 3D-printed chassis, gripper arm, and motor brackets designed around printer tolerance and assembly constraints</li>
                     <li>MicroPython navigation logic combining IMU dead reckoning with ultrasonic proximity correction</li>
                   </ul>
                 </li>
@@ -130,7 +130,7 @@
 
             <p>
               <h4>Outcome</h4>
-              Successfully demonstrated autonomous shoe removal and shelving system with the following capabilities:
+              The final prototype demonstrated an integrated autonomous shoe-removal and shelving workflow with the following capabilities:
               <ul>
                 <li>Reliable weight-based shoe detection with 8 kg threshold sensitivity</li>
                 <li>Safe, hands-free shoe release via linear actuator stabilization</li>
@@ -200,11 +200,6 @@
                   <figcaption>Robot Shelfer (Mobile Platform)</figcaption>
                 </figure>
 
-                <figure>
-                  <img src="../assets/img/project/iot/iotcover.jpg" alt="Final Prototype">
-                  <figcaption>Complete System Prototype</figcaption>
-                </figure>
-
               </div>
             </div>
 
@@ -213,7 +208,7 @@
               <p><strong>Downloads:</strong></p>
               <ul style="list-style: none; padding-left: 0;">
                 <li>
-                  <a href="../assets/img/project/iot/finalReport.pdf" download style="color: #12d640; text-decoration: none; font-weight: 500;">
+                  <a href="../assets/img/project/iot/finalReport.pdf" download style="color: var(--accent); text-decoration: none; font-weight: 500;">
                     📄 Final Project Report (PDF)
                   </a>
                 </li>

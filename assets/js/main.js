@@ -4,6 +4,54 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+// Theme toggle
+(function() {
+  var storageKey = 'portfolio-theme';
+  var root = document.documentElement;
+
+  function getPreferredTheme() {
+    try {
+      var savedTheme = localStorage.getItem(storageKey);
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+    } catch (error) {
+      return 'dark';
+    }
+
+    return 'dark';
+  }
+
+  function applyTheme(theme) {
+    var isLight = theme === 'light';
+    root.classList.toggle('light-theme', isLight);
+
+    var toggle = document.querySelector('.theme-toggle');
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+      toggle.setAttribute('title', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+    }
+  }
+
+  applyTheme(getPreferredTheme());
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.querySelector('.theme-toggle');
+    if (!toggle) {
+      return;
+    }
+
+    toggle.addEventListener('click', function() {
+      var nextTheme = root.classList.contains('light-theme') ? 'dark' : 'light';
+      try {
+        localStorage.setItem(storageKey, nextTheme);
+      } catch (error) {}
+      applyTheme(nextTheme);
+    });
+  });
+})();
+
 if (window.jQuery) !(function($) {
 
   "use strict";

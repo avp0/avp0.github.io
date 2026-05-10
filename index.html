@@ -15,6 +15,16 @@
   <meta name="description" content="Aarush Panda is a mechanical engineering student at UC Berkeley focused on aerospace, defense, eVTOL systems, CAD, FEA, and hardware prototyping.">
   <meta name="keywords" content="Aarush Panda, mechanical engineering, UC Berkeley, aerospace, defense, eVTOL, CAD, FEA, product development, hardware prototyping">
 
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('portfolio-theme') === 'light') {
+          document.documentElement.classList.add('light-theme');
+        }
+      } catch (error) {}
+    })();
+  </script>
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,10 +49,16 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+  <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+    <i class="ri-sun-line theme-toggle-sun" aria-hidden="true"></i>
+    <i class="ri-moon-line theme-toggle-moon" aria-hidden="true"></i>
+  </button>
+
   <header id="header" class="header-tops">
     <div class="container">
       <h1>Aarush Panda</h1>
-      <h2 style="color:#fff">Mechanical Engineering @ UC Berkeley | Aerospace &amp; Defense | eVTOL Designer</h2>
+      <h2>Mechanical engineering student at UC Berkeley building aerospace, defense, and eVTOL hardware</h2>
+      <p class="hero-summary">I design, analyze, prototype, and test mechanical systems across aircraft, robotics, and mission-driven hardware.</p>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -57,11 +73,11 @@
 
       <div class="hero-actions" style="margin-top: 24px;">
         <a href="https://drive.google.com/file/d/1MMA73ohK-Q0TxmP7xKg-WFcWu9jCebVC/view?usp=sharing" target="_blank" rel="noopener"
-           style="display:inline-block; margin-right:12px; padding:12px 22px; background:#12d640; color:#111; border-radius:4px; font-weight:700; text-decoration:none;">
+           class="hero-button hero-button-primary">
           View Resume
         </a>
         <a href="#projects"
-           style="display:inline-block; padding:12px 22px; border:1px solid #12d640; color:#12d640; border-radius:4px; font-weight:700; text-decoration:none;">
+           class="hero-button hero-button-secondary">
           Featured Projects
         </a>
       </div>
@@ -69,9 +85,6 @@
       <div class="social-links">
         <a href="https://www.linkedin.com/in/aarush-panda" target="_blank" rel="noopener" class="linkedin">
           <i class="bx bxl-linkedin"></i>
-        </a>
-        <a href="https://www.github.com/avp0" target="_blank" rel="noopener" class="github">
-          <i class="bx bxl-github"></i>
         </a>
       </div>
     </div>
@@ -98,6 +111,10 @@
           <p>
             I am strongest in the early-to-mid stage engineering loop: defining requirements, building concepts, analyzing loads and interfaces, fabricating prototypes, and iterating toward hardware that is useful in the real world.
           </p>
+          <p>
+            If you want to talk hardware, aerospace, defense technology, or mechanical design, feel free to reach out on
+            <a href="https://www.linkedin.com/in/aarush-panda" target="_blank" rel="noopener">LinkedIn</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -110,25 +127,25 @@
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="icon-box">
-            <i class="ri-rocket-2-line" style="color: #5578ff;"></i>
+            <i class="ri-rocket-2-line" style="color: var(--accent-hover);"></i>
             <h3>Aerospace Systems</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
+            <i class="ri-global-line" style="color: #c8b6e6;"></i>
             <h3>Defense Technology</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
           <div class="icon-box">
-            <i class="ri-edit-circle-line" style="color: #e80368;"></i>
+            <i class="ri-edit-circle-line" style="color: #ad8ad9;"></i>
             <h3>Mechanical Design</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
           <div class="icon-box">
-            <i class="ri-tools-line" style="color: #1bde20;"></i>
+            <i class="ri-tools-line" style="color: var(--accent);"></i>
             <h3>Product Development</h3>
           </div>
         </div>
@@ -199,17 +216,17 @@
         </div>
         <div class="col-md-10">
           <h4 style="text-align:left; color:#fff; margin-bottom: 15px;">
-            <a style="color:#ffd700">University of California, Berkeley</a>
+            <a style="color:#d6b100">University of California, Berkeley</a>
           </h4>
           <p style="text-align:left; font-size:0.9em; color:#e0e0e0; margin-bottom: 6px;">
             <em>B.S. Mechanical Engineering with Aerospace Concentration, Expected May 2027</em>
           </p>
           <p style="text-align:left; font-size:0.85em; color:#aaaaaa; margin-bottom: 20px;">
             <strong style="color:#cccccc;">Involvements:</strong>
-            <a href="https://brsl.berkeley.edu" target="_blank" rel="noopener" style="color:#00bfff; text-decoration:none;">Undergraduate Research</a>,
-            <span style="color:#00bfff;">VTOL @ Berkeley</span>,
-            <span style="color:#00bfff;">Dual Degree and Defense Club (DDU) at Berkeley</span>,
-            <span style="color:#00bfff;">Captain of D1 Club Ultimate Frisbee Team</span>
+            <a href="https://brsl.berkeley.edu" target="_blank" rel="noopener" style="color:#0096cc; text-decoration:none;">Undergraduate Research</a>,
+            <span style="color:#0096cc;">VTOL @ Berkeley</span>,
+            <span style="color:#0096cc;">Dual Degree and Defense Club (DDU) at Berkeley</span>,
+            <span style="color:#0096cc;">Captain of D1 Club Ultimate Frisbee Team</span>
           </p>
           <div class="coursework-section">
             <h5>Engineering Coursework</h5>
@@ -317,7 +334,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <h4 class="project-title">HushLight</h4>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/prodDev/prodDev.jpg" alt="HushLight product development project">
+            <img src="assets/img/project/prodDev/front-on-v1.jpg" alt="HushLight prototype with light on">
             <div class="portfolio-info">
               <div class="portfolio-links">
                 <a href="projects/prodDev.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -330,14 +347,14 @@
           <h4 class="project-title">Summer 2026: V2X Internship</h4>
           <div class="portfolio-wrap" style="height: 260px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12);">
             <div style="text-align:center; padding: 24px;">
-              <h4 style="color:#12d640; margin-bottom: 8px;">Coming Soon</h4>
+              <h4 style="color:var(--accent); margin-bottom: 8px;">Coming Soon</h4>
               <p style="color:#ddd; margin:0;">Internship project details will be added after Summer 2026.</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <h4 class="project-title">Ad Astra</h4>
+          <h4 class="project-title">Ad Astra (Hacking 4 Defense)</h4>
           <div class="portfolio-wrap">
             <img src="assets/img/project/astra/logo.jpg" alt="Ad Astra project logo">
             <div class="portfolio-info">
@@ -355,50 +372,34 @@
 
       <div class="row portfolio-container">
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <h4 class="project-title">IoT Project</h4>
+          <h4 class="project-title">Robotic Shoe Shelfer</h4>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/iot/team.JPG" alt="IoT project">
+            <img src="assets/img/project/iot/shelfer-thumbnail.jpg" alt="IoT robot shelfer prototype">
             <div class="portfolio-info"><div class="portfolio-links"><a href="projects/iot.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <h4 class="project-title">CrutchGuard</h4>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/crutchguard/crutchguardThumbnail.jpg" alt="CrutchGuard project">
-            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/crutchguard.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <h4 class="project-title">Undergraduate Research</h4>
-          <div class="portfolio-wrap">
+          <div class="portfolio-wrap project-logo-wrap">
             <img src="assets/img/project/brsl/logo.png" alt="Undergraduate research project">
             <div class="portfolio-info"><div class="portfolio-links"><a href="projects/brsl.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <h4 class="project-title">Top-Down SLA Blade</h4>
+          <h4 class="project-title">CrutchGuard</h4>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/mseblade/bladerenderingwithmotor.png" alt="Top-down SLA blade project">
-            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/mseblade.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
+            <img src="assets/img/project/crutchguard/product-thumbnail.jpg" alt="CrutchGuard prototype">
+            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/crutchguard.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <h4 class="project-title">Mini Wind Turbine</h4>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/turbine/turbine.jpg" alt="Mini wind turbine project">
+            <img src="assets/img/project/turbine/prototype-thumbnail.jpg" alt="Mini wind turbine prototype">
             <div class="portfolio-info"><div class="portfolio-links"><a href="projects/turbine.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <h4 class="project-title">Oasis (EIA Startup)</h4>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Oasis/logov2.png" alt="Oasis startup project">
-            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/oasis.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
           </div>
         </div>
 
@@ -411,8 +412,16 @@
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <h4 class="project-title">Oasis (EIA Startup)</h4>
+          <div class="portfolio-wrap project-logo-wrap">
+            <img src="assets/img/project/Oasis/navy-word-logo-thumbnail.png" alt="Oasis startup project">
+            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/oasis.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <h4 class="project-title">Livermore High LEED BD+C</h4>
-          <div class="portfolio-wrap">
+          <div class="portfolio-wrap project-logo-wrap">
             <img src="assets/img/project/engie/logo.png" alt="Livermore High LEED project">
             <div class="portfolio-info"><div class="portfolio-links"><a href="projects/engie.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
           </div>
