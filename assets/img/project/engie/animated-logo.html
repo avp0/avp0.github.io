@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (new URLSearchParams(window.location.search).get("theme") === "light") {
+      document.documentElement.classList.add("light-theme");
+    }
+  </script>
   <style>
     :root {
       --engie-blue: #00aeef;
       --deep-blue: #003a70;
+      --logo-frame-bg: #000000;
+    }
+
+    html.light-theme {
+      --logo-frame-bg: transparent;
     }
 
     * {
@@ -19,7 +29,7 @@
       height: 100%;
       margin: 0;
       overflow: hidden;
-      background: transparent;
+      background: var(--logo-frame-bg);
     }
 
     body {
@@ -36,7 +46,7 @@
       height: 100%;
       padding: 18px 24px;
       overflow: hidden;
-      background: transparent;
+      background: var(--logo-frame-bg);
       isolation: isolate;
     }
 

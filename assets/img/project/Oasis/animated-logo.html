@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (new URLSearchParams(window.location.search).get("theme") === "light") {
+      document.documentElement.classList.add("light-theme");
+    }
+  </script>
   <style>
     :root {
       --oasis-navy: #001f4f;
       --oasis-gold: #f1d184;
+      --logo-frame-bg: #000000;
+    }
+
+    html.light-theme {
+      --logo-frame-bg: transparent;
     }
 
     * {
@@ -19,7 +29,7 @@
       height: 100%;
       margin: 0;
       overflow: hidden;
-      background: transparent;
+      background: var(--logo-frame-bg);
     }
 
     body {
@@ -35,7 +45,7 @@
       height: 100%;
       padding: 0;
       overflow: hidden;
-      background: transparent;
+      background: var(--logo-frame-bg);
       isolation: isolate;
     }
 
@@ -71,7 +81,7 @@
       max-height: 76%;
       object-fit: contain;
       filter: drop-shadow(0 8px 18px rgba(0, 31, 79, 0.16));
-      transform: translateY(-60px);
+      transform: translateY(-18px);
       animation: logoRise 1s cubic-bezier(0.2, 0.9, 0.2, 1) both;
     }
 
@@ -107,7 +117,7 @@
 
       100% {
         opacity: 1;
-        transform: translateY(-60px) scale(1);
+        transform: translateY(-18px) scale(1);
       }
     }
 

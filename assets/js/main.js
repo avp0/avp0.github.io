@@ -25,6 +25,7 @@
   function applyTheme(theme) {
     var isLight = theme === 'light';
     root.classList.toggle('light-theme', isLight);
+    syncLogoFrames(theme);
 
     var toggle = document.querySelector('.theme-toggle');
     if (toggle) {
@@ -32,6 +33,24 @@
       toggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
       toggle.setAttribute('title', isLight ? 'Switch to dark theme' : 'Switch to light theme');
     }
+  }
+
+  function syncLogoFrames(theme) {
+    var frames = document.querySelectorAll('.portfolio-logo-frame');
+    frames.forEach(function(frame) {
+      var source = frame.getAttribute('src');
+      if (!source) {
+        return;
+      }
+
+      var url = new URL(source, window.location.href);
+      if (url.searchParams.get('theme') === theme) {
+        return;
+      }
+
+      url.searchParams.set('theme', theme);
+      frame.setAttribute('src', url.href);
+    });
   }
 
   applyTheme(getPreferredTheme());
