@@ -191,19 +191,32 @@ if (window.jQuery) !(function($) {
     }
   });
 
-  // Porfolio isotope and filter
+  // Project isotope grids and category filters
   $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
+    var $projectGrids = $('#projects .portfolio-container');
+
+    $projectGrids.each(function() {
+      $(this).isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
     });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
+    $('#portfolio-flters button').on('click', function() {
+      var $button = $(this);
+      var filterValue = $button.data('filter');
 
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
+      $('#portfolio-flters button')
+        .removeClass('filter-active')
+        .attr('aria-pressed', 'false');
+      $button
+        .addClass('filter-active')
+        .attr('aria-pressed', 'true');
+
+      $projectGrids.each(function() {
+        $(this).isotope({
+          filter: filterValue
+        });
       });
     });
 

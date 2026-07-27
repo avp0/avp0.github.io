@@ -147,10 +147,12 @@ html.light-theme .services .icon-box h4 a,
 html.light-theme .services .icon-box p,
 html.light-theme .skill-group h4,
 html.light-theme .skill-group p,
-html.light-theme .current-work-item p,
 html.light-theme .project-impact,
 html.light-theme .project-title,
 html.light-theme .coursework-list,
+html.light-theme .coursework-category h6,
+html.light-theme .experience-card h3,
+html.light-theme .experience-card ul,
 html.light-theme .image-gallery figcaption,
 html.light-theme .about-photo-caption,
 html.light-theme #last-updated,
@@ -199,10 +201,50 @@ html.light-theme .services .icon-box:hover {
   background: #ffffff;
 }
 
-html.light-theme .skill-group,
-html.light-theme .current-work-item {
+html.light-theme .skill-group {
   background: rgba(255, 255, 255, 0.74);
   border-color: rgba(32, 33, 36, 0.08);
+}
+
+html.light-theme .experience-card,
+html.light-theme .coursework-section {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(32, 33, 36, 0.1);
+  box-shadow: 0 12px 34px rgba(32, 33, 36, 0.08);
+}
+
+html.light-theme .experience-marker {
+  border-color: #f5f4f0;
+}
+
+html.light-theme .experience-organization,
+html.light-theme .coursework-summary-meta {
+  color: #5f6368;
+}
+
+html.light-theme .experience-index {
+  color: rgba(32, 33, 36, 0.08);
+}
+
+html.light-theme .coursework-section summary::after {
+  color: #202124;
+}
+
+html.light-theme .coursework-content {
+  border-top-color: rgba(32, 33, 36, 0.08);
+}
+
+html.light-theme .portfolio #portfolio-flters button {
+  color: #202124;
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(32, 33, 36, 0.14);
+}
+
+html.light-theme .portfolio #portfolio-flters button:hover,
+html.light-theme .portfolio #portfolio-flters button.filter-active {
+  color: #fff;
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
 }
 
 html.light-theme .section-title h2::after {
@@ -650,10 +692,6 @@ section .container {
   color: #fff;
 }
 
-.compact-section-title {
-  margin-top: 34px;
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -713,33 +751,6 @@ section .container {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
-}
-
-.current-work-grid {
-  display: grid;
-  gap: 12px;
-}
-
-.current-work-item {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  align-items: center;
-  padding: 16px 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-}
-
-.current-work-item span {
-  color: var(--accent-hover);
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-
-.current-work-item p {
-  color: #d8d8d8;
-  margin: 0;
-  line-height: 1.55;
 }
 
 @media (max-width: 992px) {
@@ -1004,6 +1015,158 @@ section .container {
 }
 
 /*--------------------------------------------------------------
+# Experience timeline
+--------------------------------------------------------------*/
+.experience-timeline {
+  position: relative;
+  max-width: 1120px;
+  margin: 8px auto 0;
+  padding-left: 42px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 18px;
+  left: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), rgba(141, 85, 234, 0.16));
+}
+
+.experience-timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.experience-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.experience-marker {
+  position: absolute;
+  top: 24px;
+  left: -41px;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #0d0a14;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px rgba(141, 85, 234, 0.42);
+}
+
+.experience-card {
+  position: relative;
+  padding: 24px 26px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(35, 24, 55, 0.9), rgba(18, 14, 28, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(141, 85, 234, 0.52);
+}
+
+.experience-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.experience-card h3 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.experience-date,
+.experience-organization {
+  margin: 0;
+}
+
+.experience-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+  color: var(--accent-hover);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-organization {
+  color: #b6b2c0;
+  font-size: 0.94rem;
+}
+
+.experience-index {
+  color: rgba(255, 255, 255, 0.08);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #d8d8d8;
+}
+
+.experience-card li {
+  padding: 0 0 8px 4px;
+  line-height: 1.55;
+}
+
+.experience-card li:last-child {
+  padding-bottom: 0;
+}
+
+@media (max-width: 576px) {
+  .experience-timeline {
+    padding-left: 28px;
+  }
+
+  .experience-timeline::before {
+    left: 6px;
+  }
+
+  .experience-marker {
+    left: -29px;
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+
+  .experience-card {
+    padding: 20px 18px 17px;
+  }
+
+  .experience-card-header {
+    gap: 12px;
+  }
+
+  .experience-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .experience-index {
+    font-size: 1.8rem;
+  }
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
@@ -1100,35 +1263,48 @@ section .container {
 }
 
 .portfolio #portfolio-flters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   padding: 0;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 28px;
   list-style: none;
   text-align: center;
-  border-radius: 50px;
-  padding: 2px 15px;
 }
 
 .portfolio #portfolio-flters li {
+  margin: 0;
+}
+
+.portfolio #portfolio-flters button {
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 16px 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 16px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  text-transform: uppercase;
+  font-family: inherit;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
-  margin: 0 3px 10px 3px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   transition: all 0.3s ease-in-out;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters button:hover,
+.portfolio #portfolio-flters button.filter-active {
   background: var(--accent-dark);
+  border-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
+.portfolio #portfolio-flters button:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 3px;
 }
 
 .portfolio .portfolio-wrap {
@@ -1487,167 +1663,133 @@ section .container {
 /* ================================
    COURSEWORK SECTION STYLES
    ================================ */
-
-/* Main coursework section container */
 .coursework-section {
-  margin-bottom: 2rem;
+  margin: 8px 0 1.2rem;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  overflow: hidden;
 }
 
-/* Coursework section titles */
-.coursework-section h5 {
+.coursework-section summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 48px 15px 18px;
+  position: relative;
   color: #d6b100;
-  margin-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Coursework lists */
-.coursework-list {
-  font-size: 0.9rem;
+.coursework-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.coursework-section summary::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
   color: #fff;
-  padding-left: 1.25rem;
-  margin-bottom: 0;
-  list-style-type: disc;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.coursework-list li {
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+.coursework-section[open] summary::after {
+  content: "−";
 }
 
-.coursework-list a {
-  color: #0096cc;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.coursework-section summary:hover {
+  color: #f0d45d;
+  background: rgba(255, 255, 255, 0.045);
 }
 
-.coursework-list a:hover {
-  text-decoration: underline;
-  color: #1aa8dc;
+.coursework-section summary:focus-visible {
+  outline: 2px solid var(--accent-hover);
+  outline-offset: -3px;
 }
 
-/* External links (like European Innovation Academy) */
-.coursework-list a.external-link {
-  color: #bbb;
-  font-style: italic;
+.coursework-summary-meta {
+  color: #9fa3ad;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.coursework-list a.external-link:hover {
-  color: #ddd;
-}
-
-/* Note text under coursework */
-.coursework-note {
-  font-size: 0.85rem;
-  color: #bbbbbb;
-  font-style: italic;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-/* Education section specific overrides */
-#education .coursework-section h5 {
-  text-align: left;
-  padding: 0;
+.coursework-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 28px;
+  padding: 4px 18px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .coursework-category {
-  margin-bottom: 0.85rem;
+  margin: 0;
+  padding-top: 16px;
 }
 
 .coursework-category h6 {
   color: #cccccc;
-  font-size: 0.92rem;
-  font-weight: 600;
-  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
 }
 
-/* Responsive design for coursework */
+.coursework-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #fff;
+  font-size: 0.86rem;
+  list-style-type: disc;
+}
+
+.coursework-list li {
+  margin-bottom: 0.45rem;
+  line-height: 1.45;
+}
+
+.coursework-list li:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
+  .coursework-content {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
   .coursework-list {
-    font-size: 0.85rem;
-    padding-left: 1rem;
-  }
-  
-  .coursework-section h5 {
-    font-size: 1rem;
-  }
-  
-  .coursework-note {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
   }
 }
 
 @media (max-width: 576px) {
-  .coursework-list {
-    font-size: 0.8rem;
+  .coursework-section summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
   }
-  
-  .coursework-section {
-    margin-bottom: 1.5rem;
-  }
-}
 
-/* Bootstrap utility classes you might need */
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
-/* If you need custom Bootstrap-style columns */
-@media (min-width: 992px) {
-  .coursework-col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+  .coursework-content {
     padding-right: 15px;
     padding-left: 15px;
   }
 }
 
-.coursework-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-@media (max-width: 991px) {
-  .coursework-col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-.coursework-section {
-  margin-bottom: 1rem;
-}
-
-.coursework-section summary {
-  color: #d6b100;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin: 0.5rem 0;
-}
-
-.coursework-section summary:hover {
-  color: #e1c447;
-}
-
-.coursework-list {
-  font-size: 0.9rem;
-  color: #fff;
-  padding-left: 30px;
-  margin-top: 5px;
-}
 .portfolio-wrap {
   background-color: #ffffff;
   position: relative;
