@@ -81,10 +81,6 @@
            class="hero-button hero-button-primary">
           View Resume
         </a>
-        <a href="assets/docs/AarushPandaResume.pdf" download
-           class="hero-button hero-button-secondary">
-          Download PDF
-        </a>
         <a href="#projects"
            class="hero-button hero-button-secondary">
           Featured Projects
@@ -113,10 +109,10 @@
 
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <p>
-            I'm a senior studying mechanical engineering with an aerospace concentration at UC Berkeley, along with a public policy minor. I love working on interdisciplinary problems combining mechanical design, manufacturing, and hands-on work while contributing to a mission truly important to me.
+            I'm a senior studying mechanical engineering with an aerospace concentration at UC Berkeley. I love working on interdisciplinary problems combining mechanical design, manufacturing, and hands-on work while contributing to a mission truly important to me.
           </p>
           <p>
-            Throughout my time in school, I've worked on eVTOL development, precision mechanical systems, product development, and policy-adjacent engineering research. I've led student aircraft design work, contributed to hardware development in a national laboratory environment, and built prototypes that move from CAD to physical testing.
+            Throughout my time in school, I've worked on eVTOL development, precision mechanical systems, product development, and policy-adjacent engineering research. I've led student aircraft design work, contributed to hardware development in a national laboratory environment, and built prototypes that move from CAD to physical testing. At V2X, I supported the design, fabrication, and integration of missile program hardware being deployed into the field.
           </p>
           <p>
             I am strongest in the early-to-mid stage engineering loop: defining requirements, building concepts, analyzing loads and interfaces, fabricating prototypes, and iterating toward hardware that is useful in the real world.
@@ -193,25 +189,67 @@
         <h2>Experience</h2>
       </div>
 
+      <div class="experience-overview" role="region" aria-label="Experience progression from 2023 to 2026" tabindex="0">
+        <ol class="experience-progression">
+          <li>
+            <button type="button" data-experience-target="experience-vtol" aria-label="Jump to VTOL at Berkeley experience">
+              <span class="progression-period"><time datetime="2023-08">2023</time> &ndash; <time datetime="2025-12">2025</time></span>
+              <span class="progression-marker" aria-hidden="true"></span>
+              <span class="progression-title">VTOL @ Berkeley</span>
+              <span class="progression-focus">Aircraft design &amp; leadership</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-experience-target="experience-eia" aria-label="Jump to European Innovation Academy experience">
+              <span class="progression-period"><time datetime="2024">Summer 2024</time></span>
+              <span class="progression-marker" aria-hidden="true"></span>
+              <span class="progression-title">EIA</span>
+              <span class="progression-focus">Study abroad &amp; entrepreneurship</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-experience-target="experience-nnl" aria-label="Jump to Naval Nuclear Laboratory experience">
+              <span class="progression-period"><time datetime="2025">Summer 2025</time></span>
+              <span class="progression-marker" aria-hidden="true"></span>
+              <span class="progression-title">NNL</span>
+              <span class="progression-focus">Precision mechanical hardware</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-experience-target="experience-v2x" aria-label="Jump to V2X experience">
+              <span class="progression-period"><time datetime="2026">Summer 2026</time></span>
+              <span class="progression-marker" aria-hidden="true"></span>
+              <span class="progression-title">V2X</span>
+              <span class="progression-focus">Missile hardware &amp; field deployment</span>
+            </button>
+          </li>
+        </ol>
+      </div>
+
       <div class="experience-timeline" aria-label="Professional experience timeline">
-        <article class="experience-timeline-item">
+        <article id="experience-v2x" class="experience-timeline-item" tabindex="-1">
           <div class="experience-marker" aria-hidden="true"></div>
           <div class="experience-card">
             <div class="experience-card-header">
               <div>
                 <p class="experience-date"><time datetime="2026-05">May 2026</time> – <time datetime="2026-07">July 2026</time></p>
-                <h3>Summer 2026 Internship</h3>
+                <h3>Mechanical Engineering Intern</h3>
                 <p class="experience-organization">V2X</p>
               </div>
               <span class="experience-index" aria-hidden="true">01</span>
             </div>
             <ul>
-              <li>Internship experience details will be added soon.</li>
+              <li>Supported design and integration of missile hardware being deployed into the field.</li>
+              <li>Released production-ready Creo PDU drawings addressing MIL-STD-810 requirements.</li>
+              <li>Standardized COTS 80/20 rack mounts for fabrication and reuse across programs.</li>
+              <li>Resolved generator packaging; designed custom steel brackets and a custom fuel tank/cell.</li>
+              <li>Supported an on-time launcher demonstration that generated three potential contract leads.</li>
+              <li>Produced GD&amp;T inspection drawings and managed BOMs and Windchill documentation.</li>
             </ul>
           </div>
         </article>
 
-        <article class="experience-timeline-item">
+        <article id="experience-nnl" class="experience-timeline-item" tabindex="-1">
           <div class="experience-marker" aria-hidden="true"></div>
           <div class="experience-card">
             <div class="experience-card-header">
@@ -231,7 +269,27 @@
           </div>
         </article>
 
-        <article class="experience-timeline-item">
+        <article id="experience-eia" class="experience-timeline-item" tabindex="-1">
+          <div class="experience-marker" aria-hidden="true"></div>
+          <div class="experience-card">
+            <div class="experience-card-header">
+              <div>
+                <p class="experience-date"><time datetime="2024">Summer 2024</time></p>
+                <h3>Study Abroad &amp; Entrepreneurship</h3>
+                <p class="experience-organization">European Innovation Academy (EIA)</p>
+              </div>
+              <span class="experience-index" aria-hidden="true">03</span>
+            </div>
+            <ul>
+              <li>Developed Oasis, a safety-focused navigation app concept, with an EIA team.</li>
+              <li>Built an interactive Figma prototype for safety routing and verified incident reporting.</li>
+              <li>Defined a freemium business model, target users, and a phased market expansion plan.</li>
+              <li>Launched an early prototype and website, attracting 360+ signups in the first week.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article id="experience-vtol" class="experience-timeline-item" tabindex="-1">
           <div class="experience-marker" aria-hidden="true"></div>
           <div class="experience-card">
             <div class="experience-card-header">
@@ -240,7 +298,7 @@
                 <h3>President &amp; Lead Mechanical Engineer</h3>
                 <p class="experience-organization">VTOL @ Berkeley</p>
               </div>
-              <span class="experience-index" aria-hidden="true">03</span>
+              <span class="experience-index" aria-hidden="true">04</span>
             </div>
             <ul>
               <li>Led end-to-end mechanical design for Berkeley's first human-carrying eVTOL aircraft.</li>
@@ -251,24 +309,6 @@
           </div>
         </article>
 
-        <article class="experience-timeline-item">
-          <div class="experience-marker" aria-hidden="true"></div>
-          <div class="experience-card">
-            <div class="experience-card-header">
-              <div>
-                <p class="experience-date"><time datetime="2023-06">Jun 2023</time> – <time datetime="2023-08">Aug 2023</time></p>
-                <h3>Sustainability Engineering Intern</h3>
-                <p class="experience-organization">ENGIE / Livermore High</p>
-              </div>
-              <span class="experience-index" aria-hidden="true">04</span>
-            </div>
-            <ul>
-              <li>Optimized lighting, solar, and HVAC energy models for a campus sustainability project with 718,000+ kWh in projected annual savings.</li>
-              <li>Built LEED BD+C planning support around indoor environmental quality and renewable-energy credits.</li>
-              <li>Translated engineering analysis into articles, presentations, and videos for school and community stakeholders.</li>
-            </ul>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -410,16 +450,16 @@
 
       <div class="row portfolio-container">
         <div class="col-lg-4 col-md-6 portfolio-item filter-defense">
-          <h4 class="project-title">Levelling Mechanism</h4>
+          <h4 class="project-title">V2X: Missile Program Engineering<small class="project-date">Summer 2026</small></h4>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/nnlcover2.png" alt="Levelling mechanism project">
+            <img src="assets/img/project/v2x/v2xthumbnail1.jpg" alt="Missile launcher firing from a field vehicle">
             <div class="portfolio-info">
               <div class="portfolio-links">
-                <a href="projects/nnl.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+                <a href="projects/v2x.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details" aria-label="V2X Internship Project Details"><i class="bx bx-info-circle" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
-          <p class="project-impact">Creo + MathCAD + GD&amp;T | Precision payload leveling hardware</p>
+          <p class="project-impact">Mechanical design + GD&amp;T + prototype assembly</p>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-aerospace">
@@ -435,6 +475,19 @@
           <p class="project-impact">SolidWorks + FEA + composites | Human-carrying eVTOL systems</p>
         </div>
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-defense">
+          <h4 class="project-title">NNL: Payload Levelling Mechanism<small class="project-date">Summer 2025</small></h4>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/nnlcover2.png" alt="Levelling mechanism project">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <a href="projects/nnl.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="project-impact">Creo + MathCAD + GD&amp;T | Precision payload leveling hardware</p>
+        </div>
+
         <div class="col-lg-4 col-md-6 portfolio-item filter-product-development">
           <h4 class="project-title">HushLight</h4>
           <div class="portfolio-wrap">
@@ -446,17 +499,6 @@
             </div>
           </div>
           <p class="project-impact">Sensing + actuation + packaging | Shared-living product prototype</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-defense">
-          <h4 class="project-title">Summer 2026: V2X Internship</h4>
-          <div class="portfolio-wrap" style="height: 260px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12);">
-            <div style="text-align:center; padding: 24px;">
-              <h4 style="color:var(--accent); margin-bottom: 8px;">Coming Soon</h4>
-              <p style="color:#ddd; margin:0;">Internship project details will be added after Summer 2026.</p>
-            </div>
-          </div>
-          <p class="project-impact">Mission-focused engineering | Details after internship begins</p>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-aerospace filter-defense filter-entrepreneurship">
@@ -536,23 +578,6 @@
           <p class="project-impact">Product strategy + prototyping | Safety navigation concept</p>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-miscellaneous">
-          <h4 class="project-title">Livermore High LEED BD+C</h4>
-          <div class="portfolio-wrap project-logo-wrap animated-logo-wrap">
-            <iframe class="portfolio-logo-frame" src="assets/img/project/engie/animated-logo.html?theme=dark&v=3" title="ENGIE animated logo" loading="lazy"></iframe>
-            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/engie.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
-          </div>
-          <p class="project-impact">Energy modeling + LEED | Campus sustainability analysis</p>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-miscellaneous">
-          <h4 class="project-title">Vaccinate the States</h4>
-          <div class="portfolio-wrap animated-logo-wrap">
-            <img src="assets/img/project/vts/vaccinate-loading-thumbnail.gif" alt="Vaccinate the States loading animation">
-            <div class="portfolio-info"><div class="portfolio-links"><a href="projects/vts.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a></div></div>
-          </div>
-          <p class="project-impact">Data + public access | Vaccine appointment information platform</p>
-        </div>
       </div>
     </div>
   </section>

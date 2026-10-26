@@ -71,6 +71,20 @@
   });
 })();
 
+// Jump from the horizontal experience overview to the corresponding details.
+document.querySelectorAll('[data-experience-target]').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var target = document.getElementById(button.getAttribute('data-experience-target'));
+    if (!target) {
+      return;
+    }
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    target.focus({ preventScroll: true });
+  });
+});
+
 if (window.jQuery) !(function($) {
 
   "use strict";
